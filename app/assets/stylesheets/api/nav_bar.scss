@@ -1,0 +1,94 @@
+.nav-bar-main-div{
+  display: flex;
+  justify-content: space-between;
+  height: 61px;
+  border-bottom: 1px solid rgb(188, 188, 194);
+}
+
+.nav-bar-right-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  // border: 1px solid black;
+  // padding-right: 20px;
+  // align-content: center;  
+  align-items: center;
+  font-family: Benton Sans,
+  Helvetica Neue,
+  Helvetica,
+  Roboto,
+  Arial,
+  sans-serif;
+  color:#5D6065;
+  text-align: center;
+  width: 632px;
+  
+  
+
+  
+}
+
+.nav-bar-home {
+  border-right: 1px solid rgb(188, 188, 194);
+  // padding-top: 10px;
+  // padding-left: 10px;
+  color: #f6682F;
+  font-size: 22px;
+  font-family: Benton Sans,
+  -apple-system,
+  BlinkMacSystemFont,
+  Roboto,
+  Helvetica Neue,
+  Helvetica,
+  Tahoma,
+  Arial,
+  sans-serif;
+  padding: 10px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 130px;
+  text-align: center;
+  font-weight: bold;
+  
+}
+
+.nav-bar-link {
+  // border: 5px solid red;
+  // padding-right: 20px;
+  width: 140px;
+  border-left: 1px solid rgb(188, 188, 194);
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  // width: 130px;
+  text-align: center;
+  border-bottom: 1px solid rgb(188, 188, 194);
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+
+
+
+.user-avatar{
+  // display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  // position: relative;
+  // top: 5px;
+  align-items: center;
+  position: absolute;
+  right: 425px;
+}
+
+.background-banner{
+
+  height: 450px;
+
+}
+
