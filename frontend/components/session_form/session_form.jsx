@@ -20,36 +20,50 @@ handleSubmit(e){
   this.props.processForm(this.state);
 }
 
-  renderErrors() {
+  // renderErrors() {
+  //   return (
+  //     <ul>
+  //       {this.props.errors.map((error, i) => (
+  //         <li key={`error-${i}`}>
+  //           {error}
+  //         </li>
+  //       ))}
+  //     </ul>
+  //   );
+  // }
+
+
+  renderErrors(field) {
     return (
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
+      <div className= "session-errors">
+        {this.props.errors.find(error => error.includes(field))}
+      </div>
     );
+
   }
 
   render() {
     return(
-      <div>
+      <div className="signup-form-div">
 
       
-      <form onSubmit={(e)=>this.handleSubmit(e)}>
-        Please {this.props.formType} below or {this.props.navLink}
-          {this.renderErrors()}
+        <form className="signup-form" onSubmit={(e)=>this.handleSubmit(e)}>
+          <section className="logo">E</section>
+          <h2 className="sign-title-welcome">Welcome</h2>
+          <h3 className= "signup-message">
+            Please {this.props.formType} below or {this.props.navLink}
+          </h3>
       <label className="signup-col">
+          {this.renderErrors("Invalid")}
         Email
-        <input type="text" name="email"  onChange={this.handleChange('email')}/>
+        <input className="session-inputs" type="text" name="email"  onChange={this.handleChange('email')}/>
       </label>
       <label className="signup-col">
         Password
-        <input type="password"  onChange={this.handleChange('password')}/>
+        <input className="session-inputs" type="password"  onChange={this.handleChange('password')}/>
       </label>
       
-      <input type="submit"  value="Login"/>
+        <input className="signup-button" type="submit"  value="Login"/>
       </form>
 
       </div>

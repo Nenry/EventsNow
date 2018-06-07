@@ -7,7 +7,7 @@ import React from 'react';
 const msp = ({errors}) => ({
   errors: errors.session,
   formType: 'login',
-  navLink: <Link to="/signup">sign up instead</Link>
+  navLink: <Link className='signup-message-prop' to="/signup">sign up here</Link>
 });
 
 const mdp = (dispatch, ownProps) => ({
