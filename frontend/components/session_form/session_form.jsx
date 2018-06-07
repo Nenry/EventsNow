@@ -40,13 +40,13 @@ handleSubmit(e){
       <form onSubmit={(e)=>this.handleSubmit(e)}>
         Please {this.props.formType} below or {this.props.navLink}
           {this.renderErrors()}
-      <label htmlFor="">
+      <label className="signup-col">
         Email
         <input type="text" name="email"  onChange={this.handleChange('email')}/>
       </label>
-      <label htmlFor="">
+      <label className="signup-col">
         Password
-        <input type="password" name="password"  onChange={this.handleChange('password')}/>
+        <input type="password"  onChange={this.handleChange('password')}/>
       </label>
       
       <input type="submit"  value="Login"/>

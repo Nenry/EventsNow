@@ -9,6 +9,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div>
     <header>
+      
     <h1>Hello from app.jsx </h1>
     <GreetingContainer />
     </header>

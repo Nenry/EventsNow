@@ -1,3 +1,82 @@
 // Place all the styles related to the Api::Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.signup-form-div{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // width: 300px;
+    border: 1px solid red;
+}
+.signup-form{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  
+}
+
+.signup-img{
+  width: 75px;
+}
+
+.sign-title{
+    font-family: 'Roboto',
+    sans-serif;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.signup-message {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.signup-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid blue;
+  width: 100%;
+}
+
+.signup-col input{
+  width: 100%;
+}
+
+.first-last-name {
+  display: flex;
+}
+
+
+.signup-button {
+  background-color: #FF5900;
+  color: white;
+  width: 90%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 40px;
+}
+.logo {
+  font-size: 30px;
+  background-color: #FF5900;
+  padding: 20px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  margin: 5px;
+  color: white;
+  font-family: italic;
+  font-weight: 400;
+}
