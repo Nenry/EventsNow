@@ -9,18 +9,22 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    position: relative;
+    top: 40px;
     align-items: center;
-    // width: 300px;
-    border: 1px solid red;
+    height: 800px;
+    // border: 1px solid red;
+    // color: #909296;
+
 }
 .signup-form{
-  width: 300px;
+  width: 382px;
+  height: 594px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  // border: 1px solid black;
   
 }
 
@@ -29,19 +33,32 @@
 }
 
 .sign-title{
-    font-family: 'Roboto',
-    sans-serif;
-    font-size: 40px;
+    font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+    font-size: 1.95312rem;
     display: flex;
     justify-content: center;
     padding-bottom: 5px;
+    font-weight: 200;
+    // color: #737476;
+    color: #45494e;
 }
 
 .signup-message {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+      font-family: Benton Sans,
+      -apple-system,
+      BlinkMacSystemFont,
+      Roboto,
+      Helvetica Neue,
+      Helvetica,
+      Tahoma,
+      Arial,
+      sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
   display: flex;
   justify-content: center;
+  // color: #737476;
+  color: #45494e;
 }
 
 
@@ -50,26 +67,38 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid blue;
+  // border: 1px solid blue;
   width: 100%;
 }
 
 .signup-col input{
   width: 100%;
+  border: 1px solid black;
 }
 
 .first-last-name {
   display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  
+}
+.first-last-name input {
+  border: 1px solid black;
 }
 
 
 .signup-button {
   background-color: #FF5900;
   color: white;
-  width: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   text-align: center;
   padding: 10px;
   border-radius: 40px;
+  margin: 20px;
+  // position: absolute;
+  // bottom: 100px;
 }
 .logo {
   font-size: 30px;
@@ -82,5 +111,8 @@
   margin: 5px;
   color: white;
   font-family: 'Coda', cursive;
-  font-weight: 600;
+  font-weight: bold;
+  margin-bottom: 30px;
+  position: absolute;
+  top: 20px;  
 }

@@ -50,7 +50,7 @@ class SignUpForm extends React.Component {
           <section className="logo">E</section>
           <h2 className="sign-title">Welcome</h2>
           <label className="signup-message">
-          Create an account below 
+          Create an account. 
           </label>
           {/* {this.renderErrors()} */}
           
@@ -61,14 +61,14 @@ class SignUpForm extends React.Component {
           </label>
 
           <section className ="first-last-name">
-            <label className="signup-col" >
+            <label className="" >
               First Name
               <input type="text" name="firstname" onChange={this.handleChange('first_name')} value={this.state.first_name}/>
               {this.renderErrors("First")}
             </label>
 
 
-            <label className="signup-col">
+            <label className="">
               Last Name
               <input type="text" name="lastname" onChange={this.handleChange('last_name')} value={this.state.last_name}/>
               {this.renderErrors("Last")}
@@ -82,7 +82,7 @@ class SignUpForm extends React.Component {
           </label>
 
       
-          <input className="signup-button" type="submit"  value="Create Account"/>
+          <input className="signup-button" type="submit"  value="Sign Up"/>
   
         </form>
 
