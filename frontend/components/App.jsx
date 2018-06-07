@@ -6,6 +6,7 @@ import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import homeBgImg from './background/homebg_img';
+import FooterBar from './footer/footer';
 
 const App = () => (
   <div>
@@ -17,9 +18,10 @@ const App = () => (
     </header>
     <Switch>
 
-    <Route exact path="/signin" component={LoginFormContainer}/>
+    <AuthRoute exact path="/signin" component={LoginFormContainer}/>
     <AuthRoute path="/signup" component={SignUpFormContainer}/>
     </Switch>
+    <FooterBar />
   </div>
 );
 

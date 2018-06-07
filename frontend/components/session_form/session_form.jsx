@@ -1,6 +1,6 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
- 
+import { withRouter, Redirect } from 'react-router-dom';
+
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +18,7 @@ handleChange(field){
 handleSubmit(e){
   e.preventDefault();
   this.props.processForm(this.state);
+  <Redirect to='/'/>
 }
 
   // renderErrors() {

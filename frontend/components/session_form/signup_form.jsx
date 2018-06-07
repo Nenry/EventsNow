@@ -24,7 +24,7 @@ class SignUpForm extends React.Component {
 
   renderErrors(field) {
     return(
-      <div class="session-errors">
+      <div className="session-errors">
         {this.props.errors.find(error => error.includes(field))}
       </div>
     );
