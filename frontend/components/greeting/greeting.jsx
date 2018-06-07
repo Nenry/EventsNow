@@ -19,9 +19,9 @@ const Greeting = ({currentUser, logout}) =>{
       <button onClick={()=>logout()}>Logout</button>
       </div>
     );
-  };
 
-  return currentUser ? personalGreeting() : newSessionGreeting();
+    
+  };  return currentUser ? personalGreeting() : newSessionGreeting();
 
 };
 
