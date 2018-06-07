@@ -5,6 +5,7 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import NavBarContainer from './nav_bar/nav_bar_container';
+import homeBgImg from './background/homebg_img';
 
 const App = () => (
   <div>
@@ -12,8 +13,10 @@ const App = () => (
       
 
     <NavBarContainer />
+    <Route exact path="/" component={homeBgImg} />
     </header>
     <Switch>
+
     <Route exact path="/signin" component={LoginFormContainer}/>
     <AuthRoute path="/signup" component={SignUpFormContainer}/>
     </Switch>

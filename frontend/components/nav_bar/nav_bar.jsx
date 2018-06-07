@@ -11,8 +11,7 @@ const NavBar = (props) => {
           <section className="nav-bar-right-side">
           <Link className="nav-bar-link" to='/events'>Browse Events</Link>
             
-            <img className="user-avatar" src="https://cdn1.iconfinder.com/data/icons/circle-outlines/512/User_Account_Avatar_Person_Profile_Login_Human-512.png" />
-            {/* credit:https://www.iconfinder.com/icons/640974/account_avatar_human_login_person_profile_user_icon */}
+          
           <Link className="nav-bar-link"to={`/users/${props.currentUser.id}`}>
             {props.currentUser.first_name}
           </Link>
@@ -20,8 +19,7 @@ const NavBar = (props) => {
             <Link className="nav-bar-link" to='/events/new'>Create Event</Link>
           </section>
         </div>
-          <img className="background-banner" src="http://staybarcelonaapartments.com/blog/wp-content/uploads/2017/11/the-color-run.jpg"/>
-          {/* credit:http://staybarcelonaapartments.com/blog/whats-hot-in-barcelona/color-run-skittles-barcelona/ */}
+
       </div>
     );
   };
@@ -39,8 +37,7 @@ const NavBar = (props) => {
             <Link className="nav-bar-link" to='/events/new'>Create Event</Link>
           </section>
         </div>
-          <img className="background-banner" src="http://staybarcelonaapartments.com/blog/wp-content/uploads/2017/11/the-color-run.jpg" />
-          {/* credit:http://staybarcelonaapartments.com/blog/whats-hot-in-barcelona/color-run-skittles-barcelona/ */}
+        
       </div>
     );
   };
