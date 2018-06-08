@@ -13,6 +13,13 @@ class Api::EventsController < ApplicationController
 
   def destroy
     @event = Event.find_by(id:params[:id])
+    
+    if @event.destroy
+      render json: {}
+    else
+      render json: ["Can't delete an event that does not exist"], status: 422
+    end 
+
   end 
 
   def index
@@ -27,7 +34,12 @@ class Api::EventsController < ApplicationController
 
   def update
     @event = Event.find_by(id: params[:id])
-    render :show
+    if @event.update(event_params)
+      render :show
+    else 
+      render json: @event.errors.full_messages, status: 422
+    end 
+
   end 
 
   def event_params
