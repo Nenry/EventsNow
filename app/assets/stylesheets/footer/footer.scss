@@ -1,7 +1,7 @@
-.footer {
+.footer-bar {
   background-color: #3F3E3E;
 
-
+  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@
 .root-div{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space
   min-height: 100vh;
 
 }
@@ -34,8 +34,11 @@
 
 .footer-div{
   display: flex;
-  align-self: flex-end;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 // body{
 //   height: 100%;
 // }
+

@@ -23,11 +23,11 @@ const App = () => (
     <AuthRoute path="/signup" component={SignUpFormContainer}/>
     </Switch>
   
-    <footer>
+   
 
     <FooterBar />
 
-    </footer>
+  
    
   </div>
 );

@@ -3,7 +3,7 @@ import React from 'react';
 
 const FooterBar = () => (
   <div className="footer-div">
-  <footer className="footer" >
+  <footer className="footer-bar" >
     <a href="https://github.com/Nenry">
     <img className="footer-logo" src="http://icons.iconarchive.com/icons/limav/flat-gradient-social/512/Github-icon.png"/>
     </a>

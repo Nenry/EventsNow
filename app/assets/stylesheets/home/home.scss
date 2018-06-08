@@ -1,6 +1,8 @@
 .background-banner {
   height: 450px;
   display:flex;
+  position: relative;
+  top: 0px;
 }
 
 .home-message{
@@ -43,5 +45,5 @@
 }
 
 // .home-bg-img{
-//   // height: calc(100vh - 62px - 40px);
+//   height: calc(100vh - 62px - 40px);
 // }
