@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { signup, login, logout } from './actions/session_actions';
 import configureStore from './store/store';
 import Root from './components/root';
-import { fetchEvents, fetchEvent, createEvent,  editEvent, deleteEvent} from './util/event_api_util'
+import { fetchEvents, fetchEvent, createEvent,  editEvent, deleteEvent} from './util/event_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
 
