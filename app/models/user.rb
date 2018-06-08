@@ -1,3 +1,21 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id                 :bigint(8)        not null, primary key
+#  email              :string           not null
+#  password_digest    :string           not null
+#  session_token      :string           not null
+#  first_name         :string           not null
+#  last_name          :string           not null
+#  host_event_ids     :integer          default([]), is an Array
+#  attend_event_ids   :integer          default([]), is an Array
+#  bookmark_event_ids :integer          default([]), is an Array
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  img_url            :string           not null
+#
+
 class User < ApplicationRecord 
     validates :email, :first_name, :last_name, :password_digest, presence: true
 		validates :session_token, presence: true, uniqueness: true
