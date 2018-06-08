@@ -15,7 +15,7 @@ class Api::EventsController < ApplicationController
     @event = Event.find_by(id:params[:id])
     
     if @event.destroy
-      render json: {}
+      render :show
     else
       render json: ["Can't delete an event that does not exist"], status: 422
     end 
