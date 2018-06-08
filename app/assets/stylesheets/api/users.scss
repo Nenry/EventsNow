@@ -19,7 +19,7 @@
 }
 .signup-form{
   width: 382px;
-  height: 594px;
+  height: 694px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -185,4 +185,18 @@ border: 1px solid rgb(197, 195, 195);
     margin-bottom: 5px;
     color: black;
     
+  }
+
+
+  .demo-button {
+    background-color: #FF5900;
+    color: white;
+    width: 97%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 40px;
+    margin: 10px; // position: absolute;
+    // bottom: 100px;
   }

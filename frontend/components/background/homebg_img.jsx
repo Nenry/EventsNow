@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const homeBgImg = () =>(
-  <div>
+  <div className="home-bg-img">
     <img className="background-banner" src="http://staybarcelonaapartments.com/blog/wp-content/uploads/2017/11/the-color-run.jpg" />
     <div className="home-flex">
       <div className="home-message">

@@ -35,7 +35,13 @@
 
 .temp-events{
     border: 1px solid rgb(191, 191, 194);
-     font-size: 30px;
-     display: flex;
-     justify-content: center;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -40px;
+}
+
+.home-bg-img{
+  height: calc(100vh - 62px - 40px);
 }

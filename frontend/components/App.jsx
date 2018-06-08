@@ -9,19 +9,26 @@ import homeBgImg from './background/homebg_img';
 import FooterBar from './footer/footer';
 
 const App = () => (
-  <div>
+  <div className="root-div">
     <header>
       
 
     <NavBarContainer />
-    <Route exact path="/" component={homeBgImg} />
     </header>
+    <Route exact path="/" component={homeBgImg} />
+
     <Switch>
 
     <AuthRoute exact path="/signin" component={LoginFormContainer}/>
     <AuthRoute path="/signup" component={SignUpFormContainer}/>
     </Switch>
+  
+    <footer>
+
     <FooterBar />
+
+    </footer>
+   
   </div>
 );
 

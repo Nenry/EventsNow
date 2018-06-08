@@ -21,6 +21,12 @@ handleSubmit(e){
   <Redirect to='/'/>
 }
 
+  handleDemo(e) {
+    e.preventDefault();
+    this.props.processForm({ email: "User@Demo.com", password: "password" });
+  }
+
+
   // renderErrors() {
   //   return (
   //     <ul>
@@ -65,6 +71,7 @@ handleSubmit(e){
       </label>
       
         <input className="signup-button" type="submit"  value="Login"/>
+          <button onClick={(e) => this.handleDemo(e)} className="demo-button">Demo Login</button>
       </form>
 
       </div>

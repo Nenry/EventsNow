@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { uptime } from 'os';
 
 class SignUpForm extends React.Component {
   constructor(props) {
@@ -19,6 +20,7 @@ class SignUpForm extends React.Component {
     e.preventDefault();
     this.props.processForm(this.state);
   }
+
 
 
 
@@ -73,7 +75,7 @@ class SignUpForm extends React.Component {
 
       
           <input className="signup-button" type="submit"  value="Sign Up"/>
-  
+          
         </form>
 
       </div>
