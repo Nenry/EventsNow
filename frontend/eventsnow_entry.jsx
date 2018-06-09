@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { signup, login, logout } from './actions/session_actions';
 import configureStore from './store/store';
 import Root from './components/root';
-import { fetchEvents, fetchEvent, createEvent,  editEvent, deleteEvent} from './util/event_api_util';
+import { fetchEvents, fetchEvent, createEvent,  editEvent, deleteEvent, updateEvent} from './actions/event_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -25,11 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.signup = signup;
   // window.login = login;
   // window.logout = logout;
-  // window.store = store;
-  // window.fetchEvents = fetchEvents;
-  // window.fetchEvent = fetchEvent;
-  // window.createEvent = createEvent;
-  // window.editEvent = editEvent;
-  // window.deleteEvent = deleteEvent;
+  window.store = store;
+  window.fetchEvents = fetchEvents;
+  window.fetchEvent = fetchEvent;
+  window.createEvent = createEvent;
+  window.editEvent = editEvent;
+  window.deleteEvent = deleteEvent;
+  window.updateEvent = updateEvent;
   ReactDOM.render(<Root store={store}/>, root);
 });

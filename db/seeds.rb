@@ -194,7 +194,7 @@ Event.new({
 # $.ajax({
 #   method: 'PATCH',
 #   url: '/api/events/',
-#   data: {event: {id: 8, title: "chillerest", body: "even more chill", date: "2018-11-06",
+#   data: {event: {id: 9, title: "chillerester", body: "even more chill", date: "2018-11-06",
 #   address: "345 Spear Street",
 #   city: "San Francisco",
 #   state: "CA",
