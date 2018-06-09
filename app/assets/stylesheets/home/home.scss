@@ -41,7 +41,10 @@
 //   height: calc(100vh - 62px - 40px);
 // }
 .events-index {
-  width: 100%;
+  width: 60%;
   display: grid;
-  grid-template-columns: 3;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1em;
+  grid-auto-rows: minmax(100px, auto);
+  align-items: flex-start;
 }
