@@ -1,33 +1,25 @@
 .background-banner {
   height: 600px;
-  display:flex;
+  display: flex;
   position: relative;
   top: 0px;
 }
 
-.home-message{
+.home-message {
   width: 1050px;
   height: 209px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  // position: relative;
+  align-items: center; // position: relative;
   // margin-left: 400px;
   // margin-right: 0;
   background: white;
-  font-family: Benton Sans,
-  Helvetica Neue,
-  Helvetica,
-  Roboto,
-  Arial,
-  sans-serif;
-  font-size: 42px;
-  border: 2px solid rgb(191, 191, 194);
-  
-  // margin-bottom: 100px;
+  font-family: Benton Sans, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 70px;
+  border: 1px solid rgb(191, 191, 194); // margin-bottom: 100px;
   color: #f6682F;
-
 }
+
 .home-flex {
   display: flex;
   justify-content: center;
@@ -35,15 +27,21 @@
   bottom: 100px;
 }
 
-.temp-events{
-    border: 1px solid rgb(191, 191, 194);
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: -40px;
+.temp-events {
+  border: 1px solid rgb(191, 191, 194);
+  font-size: 30px;
+  display: flex;
+  font-family: Benton Sans, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  justify-content: center;
+  position: relative;
+  top: -40px;
 }
 
 // .home-bg-img{
 //   height: calc(100vh - 62px - 40px);
 // }
+.events-index {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3;
+}

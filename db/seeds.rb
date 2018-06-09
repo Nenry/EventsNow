@@ -46,7 +46,7 @@ Refreshments and snacks are provided!',
   address: "555 Mission St",
   city: "San Francisco",
   state: "CA",
-  host_id: 4,
+  host_id: 1,
   category_id: 2,
   tickets_left: 500,
   img_url: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F45189173%2F250588563459%2F1%2Foriginal.jpg?w=800&auto=compress&rect=0%2C0%2C800%2C400&s=26199b7c7e95896e0b604ccc7c3721f6",
@@ -84,7 +84,7 @@ HOW: Ready to start hacking?? REGISTER Here!",
   address: "44 Tehama Street",
   city: "San Francisco",
   state: "CA",
-  host_id: 4,
+  host_id: 1,
   category_id: 2,
   tickets_left: 256,
   img_url: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F44460600%2F252434965428%2F1%2Foriginal.jpg?w=800&auto=compress&rect=0%2C0%2C690%2C345&s=535b5433b749f9d854681ab19a6229dd",
@@ -94,7 +94,7 @@ HOW: Ready to start hacking?? REGISTER Here!",
 
 })
 
-Event.new({
+Event.create({
   title: 'Speed Networking with Recruiters: Network your way into a Job @Google, SF',
   body: 'Inorder to attend this event you need to purchase tickets before entering the Google campus at 345 Spear Street. There will be no ticket sales at the venue.
   Are you looking for a job or looking to transition into a new career?
@@ -181,7 +181,7 @@ Event.new({
   address: "345 Spear Street",
   city: "San Francisco",
   state: "CA",
-  host_id: 4,
+  host_id: 1,
   category_id: 5,
   tickets_left: 3,
   img_url: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F44241255%2F9608873553%2F1%2Foriginal.jpg?w=800&auto=compress&rect=0%2C0%2C708%2C354&s=b380bc279e020b856235910e8ca0f22e",

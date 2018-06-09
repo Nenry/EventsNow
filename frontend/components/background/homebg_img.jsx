@@ -1,7 +1,7 @@
 import React from 'react';
+import EventIndexContainer from '../events/event_index_container';
 
-
-const homeBgImg = () =>(
+const homeBgImg = () => (
   <div className="home-bg-img">
     <img className="background-banner" src="https://farm2.staticflickr.com/1759/28789455328_ed8f3a14bd_h.jpg" />
     {/* img credit: https://500px.com/krunja */}
@@ -13,12 +13,12 @@ const homeBgImg = () =>(
     </div>
 
     <div className="temp-events">
-        Events coming soon!
+      <EventIndexContainer />
     </div>
-    
 
-    </div>
-  
+
+  </div>
+
 
 );
 
