@@ -18,6 +18,7 @@
   font-size: 70px;
   border: 1px solid rgb(191, 191, 194); // margin-bottom: 100px;
   color: #f6682F;
+  font-weight: 100px;
 }
 
 .home-flex {
@@ -47,4 +48,26 @@
   grid-column-gap: 1em;
   grid-auto-rows: minmax(100px, auto);
   align-items: flex-start;
+}
+
+.date-style {
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0.5em;
+  color: gray;
+}
+
+.event-description {
+  display: grid;
+}
+
+.event-time {
+  display: flex;
+  position: relative;
+  left: -20px;
+}
+
+.hp-event-title {
+  font-size: 25px;
 }
