@@ -19,7 +19,7 @@ class TextArea extends React.Component {
   }
 
   render() {
-    return (<div className="event-label-input-text">
+    return (<div className="event-label-input">
       <label>{this.props.label}</label>
       <textarea className='form-text-input' onChange={this.props.onChange} value={this.props.value} />
     </div>);
@@ -81,7 +81,7 @@ class EventForm extends React.Component {
         </div>
         <div className='event-form-header'>
           <div className='step-one'>1</div>
-          <div>Event Details</div>
+          <div className='event-details-msg'>Event Details</div>
         </div>
 
         <form className="event-form"  >
@@ -95,10 +95,12 @@ class EventForm extends React.Component {
           <TextInput onChange={this.update('category_id')} value={this.state.category_id} label="Category" />
           <NumberInput onChange={this.update('tickets_left')} value={this.tickets_left} label='Tickets' />
           <NumberInput onChange={this.update('price')} value={this.state.price} label="Price" />
-          <DateInput onChange={this.update('date')} value={this.state.date} label="Date" />
           <div>
-            <TextInput onChange={this.update('time_start')} value={this.state.time_start} label="Starting Time" />
-            <TextInput onChange={this.update('time_end')} value={this.state.time_end} label="Ending Time" />
+            <label>Starting Time</label>
+            <input type="time" onChange={this.update('time_start')} value={this.state.time_start} label="Starting Time" />
+            {/* <TextInput onChange={this.update('time_start')} value={this.state.time_start} label="Starting Time" /> */}
+            <label>Ending Time</label>
+            <input type="time" onChange={this.update('time_end')} value={this.state.time_end} label="Ending Time" />
           </div>
 
           {/* <label>Price</label>

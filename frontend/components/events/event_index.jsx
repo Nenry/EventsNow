@@ -13,18 +13,24 @@ class EventIndex extends React.Component {
 
 
     return (
-      <div className="events-index">
-        {this.props.events.map((event) => {
-          return (
+      <div className="events-index-wrapper">
+        <div className="upcoming-header">Upcoming Events</div>
+        <div className="events-index">
+          {this.props.events.map((event) => {
+            return (
 
-            <EventIndexItem key={event.id} event={event} />
+              <EventIndexItem key={event.id} event={event} />
 
-          );
-        })}
+            );
+          })}
 
+
+
+        </div>
 
 
       </div>
+
     );
   }
 

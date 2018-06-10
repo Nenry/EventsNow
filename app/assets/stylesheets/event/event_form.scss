@@ -5,6 +5,8 @@
   align-content: center;
   font-family: Benton Sans, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif; // width: 1080px;
   width: 720px; // align-self: flex-start;
+  font-weight: 450;
+  color: rgb(49, 50, 51);
 }
 
 .event-container {
@@ -13,13 +15,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #F7F7F9;
-  font-family: Benton Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
+  background-color: #F7F7F9; // font-family: Benton Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
 }
 
 .event-form input {
   margin: 5px;
-  border: 1px solid rgb(201, 201, 201)
+  border: 1px solid rgb(201, 201, 201);
+  height: 40px;
+  background-color: white;
 }
 
 .event-form label {
@@ -31,6 +34,8 @@
   font-size: 30px; // align-items: center;
   width: 720px; // align-self: flex-start;
   margin-top: 20px;
+  border-bottom: 1px solid rgb(207, 207, 207);
+  margin-bottom: 10px;
 }
 
 .step-one {
@@ -75,4 +80,13 @@
   position: relative;
   left: 5px;
   margin-top: 5px;
+  background-color: white;
+}
+
+.event-details-msg {
+  display: flex;
+  align-items: center;
+  color: rgb(158, 157, 157);
+  font-weight: 150;
+  font-family: Benton Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
 }

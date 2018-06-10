@@ -46,13 +46,14 @@
   width: 60%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 1em;
+  grid-column-gap: 2em;
+  grid-row-gap: 2em;
   grid-auto-rows: minmax(100px, auto);
   align-items: flex-start;
 }
 
 .date-style {
-  font-size: 20px;
+  font-size: 15px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 0.5em;
@@ -66,11 +67,25 @@
 .event-time {
   display: flex;
   position: relative;
-  left: -20px;
+  left: -40px;
 }
 
 .hp-event-title {
   font-size: 22px;
   font-weight: 500;
-  color: rgb(44, 43, 43)
+  color: rgb(83, 78, 78);
+}
+
+.events-index-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upcoming-header {
+  font-size: 40px;
+  font-family: Benton Sans, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  margin: 10px;
+  color: rgb(158, 157, 157);
 }
