@@ -2,41 +2,36 @@
   background-color: #3F3E3E;
   display: flex;
   justify-content: center;
-  align-items: center;
-  // align-self: flex-end;
+  align-items: center; // align-self: flex-end;
   width: 100%;
-  height: 40px;
-  // position: relative;
+  height: 40px; // position: relative;
   // bottom: 0px;
   // z-index: 1;
 }
 
-.footer-logo{
+.footer-logo {
   width: 30px;
   height: 30px;
   margin-right: 10px;
 }
 
-
-.root-div{
+.root-div {
   display: flex;
-  flex-direction: column;
-  // justify-content: space
+  flex-direction: column; // justify-content: space
   min-height: 100vh;
-
 }
 
 // html {
 //   height: 100%;
 // }
-
-.footer-div{
+.footer-div {
   display: flex;
-  min-height: 100vh;
+  min-height: 50vh;
   flex-direction: column;
   justify-content: flex-end;
+  background-color: #F7F7F9;
 }
+
 // body{
 //   height: 100%;
 // }
-

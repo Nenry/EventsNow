@@ -19,9 +19,9 @@ class TextArea extends React.Component {
   }
 
   render() {
-    return (<div className="event-label-input">
+    return (<div className="event-label-input-text">
       <label>{this.props.label}</label>
-      <textarea type="text" onChange={this.props.onChange} value={this.props.value} />
+      <textarea className='form-text-input' onChange={this.props.onChange} value={this.props.value} />
     </div>);
   }
 }
@@ -76,12 +76,15 @@ class EventForm extends React.Component {
   render() {
     return (
       <div className="event-container">
+        <div className="submit-button-container">
+          <button className="submit-button" onClick={(e) => this.handleSubmit(e)} >Submit</button>
+        </div>
         <div className='event-form-header'>
           <div className='step-one'>1</div>
           <div>Event Details</div>
         </div>
 
-        <form className="event-form" onSubmit={(e) => this.handleSubmit(e)} >
+        <form className="event-form"  >
           <TextInput onChange={this.update('title')} value={this.state.title} label='Event Title'></TextInput>
           <TextArea onChange={this.update('body')} value={this.state.body} label='Event Description'></TextArea>
           <TextInput onChange={this.update('address')} value={this.state.address} label='Address'></TextInput>
@@ -123,7 +126,6 @@ class EventForm extends React.Component {
           <label>Image Link</label>
           <input type="text" onChange={this.update('img_url')} value={this.state.img_url} /> */}
 
-          <input type="submit" />
 
 
         </form>
