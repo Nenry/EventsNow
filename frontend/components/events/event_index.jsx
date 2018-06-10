@@ -22,7 +22,6 @@ class EventIndex extends React.Component {
           );
         })}
 
-        Hello
 
 
       </div>

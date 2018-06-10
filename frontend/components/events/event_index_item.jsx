@@ -4,7 +4,7 @@ const EventIndexItem = props => (
   <div>
     <img src={props.event.img_url} />
     <div className="event-description">
-      <date className="date-style">
+      <div className="date-style">
         <div>
           {props.event.date}
         </div>
@@ -13,7 +13,7 @@ const EventIndexItem = props => (
           {props.event.time_start}
         </div>
 
-      </date>
+      </div>
       <div className="hp-event-title">
         {props.event.title}
 
