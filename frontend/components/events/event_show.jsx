@@ -14,6 +14,7 @@ class EventShow extends React.Component {
     if (this.props.event) {
       return (
         <div className='event-show'>
+
           <div className="event-show-wrapper">
             <div className="event-show-banner-detail">
               <img className="event-show-banner" src={this.props.event.img_url} alt="" />
@@ -29,6 +30,11 @@ class EventShow extends React.Component {
 
             </div>
             <div className="">
+              <div className='show-bar'>
+                {this.props.session.id === this.props.event.host_id ? <button className="show-bar-button">Edit</button> : <div></div>}
+                {this.props.session.id === this.props.event.host_id ? <button onClick={() => this.props.deleteEvent(this.props.event.id)} className="show-bar-button">Delete</button> : <div></div>}
+                <button className="show-bar-button">Bookmark</button>
+              </div>
               <div className="event-show-main-detail">
                 <div className="grid-desc">
                   <div className="show-desc-header">

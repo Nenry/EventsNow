@@ -5,7 +5,8 @@ import ShowEvent from './event_show';
 
 const msp = (state, ownProps) => {
   return ({
-    event: state.entities.events[ownProps.match.params.eventId]
+    event: state.entities.events[ownProps.match.params.eventId],
+    session: state.session
   });
 };
 
