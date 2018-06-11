@@ -17,22 +17,41 @@ class EventShow extends React.Component {
             <div className="event-show-banner-detail">
               <img src={this.props.event.img_url} alt="" />
 
-              <div>
+              <div className="event-side-banner">
                 {this.props.event.title}
                 <div>
                   Price: {this.props.event.price}$
-  
+
                 </div>
+                <button className="tickets-button">Tickets</button>
               </div>
 
             </div>
-            <div className="event-show-main-detail">
+            <div className="">
               <div className="event-show-main-detail">
-                <div>
-                Description
-                  
+                <div className="grid-desc">
+                  Description
+                     <div>
+                    {this.props.event.body}
+
+                  </div>
                 </div>
-                {this.props.event.body}
+
+                <div className="details-loc">
+                  Date and Time
+                  <div>
+                    {this.props.event.time_start}
+                  </div>
+                  <div>
+                    {this.props.event.time_end}
+                  </div>
+                  <div>
+
+                    {this.props.event.address}
+                    {this.props.event.city}
+                    {this.props.event.state}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
