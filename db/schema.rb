@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_08_180506) do
+ActiveRecord::Schema.define(version: 2018_06_11_224749) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookmarks", force: :cascade do |t|
+    t.integer "event_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id", "user_id"], name: "index_bookmarks_on_event_id_and_user_id", unique: true
+    t.index ["event_id"], name: "index_bookmarks_on_event_id"
+    t.index ["user_id"], name: "index_bookmarks_on_user_id"
+  end
 
   create_table "events", force: :cascade do |t|
     t.string "title", null: false
@@ -44,9 +54,6 @@ ActiveRecord::Schema.define(version: 2018_06_08_180506) do
     t.string "session_token", null: false
     t.string "first_name", null: false
     t.string "last_name", null: false
-    t.integer "host_event_ids", default: [], array: true
-    t.integer "attend_event_ids", default: [], array: true
-    t.integer "bookmark_event_ids", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "img_url", null: false

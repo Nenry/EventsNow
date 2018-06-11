@@ -37,6 +37,12 @@ class Event < ApplicationRecord
   foreign_key: :host_id,
   class_name: :User
 
+  has_many :bookmarks,
+  primary_key: :id,
+  foreign_key: :event_id,
+  class_name: :Bookmark
+  
+
   # belongs_to :category,
   # primary_key: :id,
   # foreign_key: :category_id,

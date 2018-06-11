@@ -29,6 +29,11 @@ class User < ApplicationRecord
     foreign_key: :host_id,
     class_name: :User
 
+    has_many :bookmarks,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Bookmark
+
     def password=(password)
         @password = password
 			self.password_digest = BCrypt::Password.create(password)
