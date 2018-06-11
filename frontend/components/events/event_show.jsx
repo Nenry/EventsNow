@@ -7,6 +7,7 @@ class EventShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchEvent(this.props.match.params.eventId);
+    window.scrollTo(0, 0);
   }
 
   render() {
@@ -15,7 +16,7 @@ class EventShow extends React.Component {
         <div className='event-show'>
           <div className="event-show-wrapper">
             <div className="event-show-banner-detail">
-              <img src={this.props.event.img_url} alt="" />
+              <img className="event-show-banner" src={this.props.event.img_url} alt="" />
 
               <div className="event-side-banner">
                 {this.props.event.title}
@@ -30,25 +31,37 @@ class EventShow extends React.Component {
             <div className="">
               <div className="event-show-main-detail">
                 <div className="grid-desc">
-                  Description
-                     <div>
+                  <div className="show-desc-header">
+                    Description
+
+                  </div>
+                  <div>
                     {this.props.event.body}
 
                   </div>
                 </div>
 
                 <div className="details-loc">
-                  Date and Time
-                  <div>
-                    {this.props.event.time_start}
-                  </div>
-                  <div>
-                    {this.props.event.time_end}
-                  </div>
-                  <div>
 
-                    {this.props.event.address}
-                    {this.props.event.city}
+                  <div>
+                    <div className="sidebar-detail-header">
+
+                      Date and Time
+                    </div>
+                    {this.props.event.time_start}-{this.props.event.time_end}
+                  </div>
+
+
+                  <div>
+                    <div className="sidebar-detail-header">
+                      Location
+
+
+                    </div>
+                    <div>
+                      {this.props.event.address}
+                    </div>
+                    {this.props.event.city},
                     {this.props.event.state}
                   </div>
                 </div>

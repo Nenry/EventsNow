@@ -24,6 +24,10 @@ class User < ApplicationRecord
     attr_reader :password
     before_validation :ensure_session_token, :ensure_img_url
 
+    has_many :events,
+    primary_key: :id,
+    foreign_key: :host_id,
+    class_name: :User
 
     def password=(password)
         @password = password

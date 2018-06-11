@@ -5,7 +5,8 @@ class EventIndex extends React.Component {
 
   componentDidMount() {
 
-    return this.props.fetchEvents();
+    this.props.fetchEvents();
+    window.scrollTo(0, 0);
   }
 
 
