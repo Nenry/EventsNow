@@ -7,7 +7,8 @@ import EventForm from './event_form';
 const msp = (state, ownProps) => {
   return ({
     event: state.entities.events[ownProps.match.params.eventId],
-    formType: "Update Event"
+    formType: "Update Event",
+    errors: state.errors.events
   });
 };
 
@@ -26,11 +27,11 @@ class EditEventForm extends React.Component {
 
   render() {
 
-    const { action, event, formType } = this.props;
+    const { action, event, formType, errors } = this.props;
 
     if (this.props.event) {
       return (
-        <EventForm action={action} event={event} formType={formType} />
+        <EventForm action={action} event={event} formType={formType} errors={errors} />
       );
     } else {
       return (<div>Loading...</div>);

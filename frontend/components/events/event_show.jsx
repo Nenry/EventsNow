@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 class EventShow extends React.Component {
   constructor(props) {
     super(props);
@@ -8,6 +9,10 @@ class EventShow extends React.Component {
   componentDidMount() {
     this.props.fetchEvent(this.props.match.params.eventId);
     window.scrollTo(0, 0);
+  }
+
+  handleDelete(e) {
+    this.props.deleteEvent(this.props.event.id).then(() => this.props.history.push('/events'));
   }
 
   render() {
@@ -32,7 +37,7 @@ class EventShow extends React.Component {
             <div className="show-container">
               <div className='show-bar'>
                 {this.props.session.id === this.props.event.host_id ? <Link to={`/events/${this.props.event.id}/edit`} className="show-bar-button">Edit</Link> : <div></div>}
-                {this.props.session.id === this.props.event.host_id ? <button onClick={() => this.props.deleteEvent(this.props.event.id)} className="show-bar-button">Delete</button> : <div></div>}
+                {this.props.session.id === this.props.event.host_id ? <button onClick={(e) => this.handleDelete(e)} className="show-bar-button">Delete</button> : <div></div>}
                 <button className="show-bar-button">Bookmark</button>
               </div>
               <div className="event-show-main-detail">
@@ -86,4 +91,4 @@ class EventShow extends React.Component {
   }
 }
 
-export default EventShow;
+export default withRouter(EventShow);
