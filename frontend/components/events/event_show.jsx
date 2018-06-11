@@ -29,7 +29,7 @@ class EventShow extends React.Component {
               </div>
 
             </div>
-            <div className="">
+            <div className="show-container">
               <div className='show-bar'>
                 {this.props.session.id === this.props.event.host_id ? <Link to={`/events/${this.props.event.id}/edit`} className="show-bar-button">Edit</Link> : <div></div>}
                 {this.props.session.id === this.props.event.host_id ? <button onClick={() => this.props.deleteEvent(this.props.event.id)} className="show-bar-button">Delete</button> : <div></div>}

@@ -90,6 +90,7 @@
 
 .show-bar {
   height: 40px;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   background-color: white;
@@ -113,4 +114,8 @@
 .show-body {
   overflow: scroll;
   height: 96%
+}
+
+.show-container {
+  width: 100%;
 }

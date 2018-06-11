@@ -10,7 +10,8 @@ const msp = state => {
       city: '', state: '', category_id: '', tickets_left: '', price: '', img_url: '',
       time_start: '', time_end: ''
     },
-    formType: "Publish Event"
+    formType: "Publish Event",
+    errors: state.errors.events
   });
 };
 

@@ -61,6 +61,15 @@ class EventForm extends React.Component {
     this.state = this.props.event;
   }
 
+  renderErrors(field) {
+    return (
+      <div className="session-errors">
+        {this.props.errors.find(error => error.includes(field))}
+      </div>
+    );
+
+  }
+
   update(field) {
     return (e) => {
       this.setState({ [field]: e.target.value });
@@ -88,21 +97,34 @@ class EventForm extends React.Component {
 
         <form className="event-form"  >
           <TextInput onChange={this.update('title')} value={this.state.title} label='Event Title'></TextInput>
-          <TextArea onChange={this.update('body')} value={this.state.body} label='Event Description'></TextArea>
+          {this.renderErrors("Title")}
+          <TextArea onChange={this.update('body')} value={this.state.body} label='Event Body'></TextArea>
+          {this.renderErrors("Body")}
           <TextInput onChange={this.update('address')} value={this.state.address} label='Address'></TextInput>
+          {this.renderErrors("Address")}
           <TextInput onChange={this.update('city')} value={this.state.city} label='City'></TextInput>
+          {this.renderErrors("City")}
           <TextInput onChange={this.update('state')} value={this.state.state} label='State'></TextInput>
+          {this.renderErrors("State")}
           <DateInput onChange={this.update('date')} value={this.state.date} label='Date'></DateInput>
+          {this.renderErrors("Date")}
           <TextInput onChange={this.update('img_url')} value={this.state.img_url} label='Image URL'></TextInput>
+          {this.renderErrors("Img")}
           <TextInput onChange={this.update('category_id')} value={this.state.category_id} label="Category" />
+          {this.renderErrors("Category")}
           <NumberInput onChange={this.update('tickets_left')} value={this.tickets_left} label='Tickets' />
+          {this.renderErrors("Tickets")}
           <NumberInput onChange={this.update('price')} value={this.state.price} label="Price" />
+          {this.renderErrors("Price")}
           <div>
             <label>Starting Time</label>
             <input type="time" onChange={this.update('time_start')} value={this.state.time_start} label="Starting Time" />
+            {this.props.errors.find(error => error.includes('Time start')) ? <div className="session-errors" >Ending time can't be blank</div> : <div></div>}
+            {/* {this.renderErrors("Time start")} */}
             {/* <TextInput onChange={this.update('time_start')} value={this.state.time_start} label="Starting Time" /> */}
             <label>Ending Time</label>
             <input type="time" onChange={this.update('time_end')} value={this.state.time_end} label="Ending Time" />
+            {this.props.errors.find(error => error.includes('Time end')) ? <div className="session-errors" >Starting time can't be blank</div> : <div></div>}
           </div>
 
           {/* <label>Price</label>
