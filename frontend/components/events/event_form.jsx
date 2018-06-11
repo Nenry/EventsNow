@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { withRouter, Redirect } from 'react-router-dom';
 class TextInput extends React.Component {
   constructor(props) {
     super(props);
@@ -69,7 +69,9 @@ class EventForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.action(this.state);
+    this.props.action(this.state).then((eventRes) => this.props.history.push(`/events/${eventRes.event.id}`));
+
+
   }
 
 
@@ -77,7 +79,7 @@ class EventForm extends React.Component {
     return (
       <div className="event-container">
         <div className="submit-button-container">
-          <button className="submit-button" onClick={(e) => this.handleSubmit(e)} >Submit</button>
+          <button className="submit-button" onClick={(e) => this.handleSubmit(e)} >{this.props.formType}</button>
         </div>
         <div className='event-form-header'>
           <div className='step-one'>1</div>
@@ -143,4 +145,4 @@ class EventForm extends React.Component {
 
 }
 
-export default EventForm;
+export default withRouter(EventForm);

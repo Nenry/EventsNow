@@ -10,6 +10,7 @@ import FooterBar from './footer/footer';
 import CreateEventContainer from './events/create_event_container';
 import EventIndexContainer from './events/event_index_container';
 import EventShowContainer from './events/event_show_container';
+import EditEventContainer from './events/edit_event_container';
 const App = () => (
   <div className="root-div">
     <header>
@@ -20,6 +21,7 @@ const App = () => (
 
     <Switch>
       <Route exact path="/events/new" component={CreateEventContainer} />
+      <Route exact path="/events/:eventId/edit" component={EditEventContainer} />
       <Route exact path="/events/:eventId" component={EventShowContainer} />
       <Route exact path="/events" component={EventIndexContainer} />
       <AuthRoute exact path="/signin" component={LoginFormContainer} />
