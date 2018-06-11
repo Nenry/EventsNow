@@ -41,7 +41,7 @@ class EventShow extends React.Component {
                     Description
 
                   </div>
-                  <div>
+                  <div className="show-body">
                     {this.props.event.body}
 
                   </div>

@@ -28,8 +28,11 @@ const App = () => (
     </Switch>
 
 
+    <div>
 
-    <FooterBar />
+      <FooterBar />
+
+    </div>
 
 
 
