@@ -5,11 +5,6 @@ export const RECEIVE_BOOKMARK = 'RECEIVE_BOOKMARK';
 export const REMOVE_BOOKMARK = 'REMOVE_BOOKMARK';
 
 
-export const createBookmark = (bookmark) => dispatch => (
-  BookMarkApiUtil.createBookmark(bookmark).then(bookmarkRes => (
-    dispatch(receiveBookmark(bookmarkRes))
-  ))
-);
 
 export const receiveBookmark = (bookmark) => ({
   type: RECEIVE_BOOKMARK,
@@ -25,6 +20,12 @@ export const receiveBookmarks = (bookmarks) => ({
   type: RECEIVE_BOOKMARKS,
   bookmarks
 });
+
+export const createBookmark = (eventId) => dispatch => (
+  BookMarkApiUtil.createBookmark(eventId).then(bookmarkRes => (
+    dispatch(receiveBookmark(bookmarkRes))
+  ))
+);
 
 export const deleteBookmark = (id) => dispatch => (
   BookMarkApiUtil.deleteBookmark(id).then(bookmarkRes => (
