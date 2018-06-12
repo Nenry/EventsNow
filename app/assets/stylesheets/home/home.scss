@@ -15,8 +15,7 @@
   // margin-right: 0;
   background: white;
   font-family: Benton Sans, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 70px;
-  border: 1px solid rgb(191, 191, 194); // margin-bottom: 100px;
+  font-size: 70px; // border: 1px solid rgb(191, 191, 194); // margin-bottom: 100px;
   color: #f6682F;
   font-weight: 100px;
 }
@@ -29,7 +28,6 @@
 }
 
 .temp-events {
-  border: 1px solid rgb(191, 191, 194);
   font-size: 30px;
   display: flex;
   font-family: Benton Sans, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;

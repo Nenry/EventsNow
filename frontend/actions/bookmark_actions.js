@@ -3,7 +3,7 @@ import * as BookMarkApiUtil from '../util/bookmark_api_util';
 export const RECEIVE_BOOKMARKS = 'RECEIVE_BOOKMARKS';
 export const RECEIVE_BOOKMARK = 'RECEIVE_BOOKMARK';
 export const REMOVE_BOOKMARK = 'REMOVE_BOOKMARK';
-
+export const RECEIVE_BOOKMARK_ERRORS = 'RECEIVE_BOOKMARK_ERRORS';
 
 
 export const receiveBookmark = (bookmark) => ({
@@ -21,9 +21,16 @@ export const receiveBookmarks = (bookmarks) => ({
   bookmarks
 });
 
+export const receiveErrors = (errors) => ({
+  type: RECEIVE_BOOKMARK_ERRORS,
+  errors
+});
+
 export const createBookmark = (eventId) => dispatch => (
   BookMarkApiUtil.createBookmark(eventId).then(bookmarkRes => (
     dispatch(receiveBookmark(bookmarkRes))
+  ), err => (
+    dispatch(receiveErrors(err.responseJSON))
   ))
 );
 

@@ -7,7 +7,7 @@ class Api::BookmarksController < ApplicationController
     if @bookmark.save
       render :show
     else
-      render json: @bookmark.errors.full_messages
+      render json: @bookmark.errors.full_messages, status: 422
     end
 
   end 

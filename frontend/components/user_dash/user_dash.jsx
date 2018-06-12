@@ -11,17 +11,30 @@ class UserDash extends React.Component {
 
   render() {
 
-    if (Object.keys(this.props.currentBookmarks).length > 0) {
+    if (this.props.currentBookmarks.every(bookmark => bookmark.event !== undefined)) {
 
       return (
-        <div className="bookmarks">
+        <div className="users-dash-wrapper">
 
-          {this.props.currentBookmarks.map((bookmark) => (
-            <EventIndexItem key={bookmark.event.id} event={bookmark.event} />
 
-          ))}
-
+          <div className="user-events-bar">
+            Saved Events
         </div>
+
+
+
+          <div className="bookmarks">
+
+            {this.props.currentBookmarks.map((bookmark) => (
+              <div key={bookmark.id}>
+                <EventIndexItem key={bookmark.event.id} event={bookmark.event} className="bookmarks" />
+
+              </div>
+
+            ))}
+
+          </div>
+        </div >
       );
 
 
