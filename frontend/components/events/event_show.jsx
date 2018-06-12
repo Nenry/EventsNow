@@ -1,13 +1,43 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
+import Modal from 'react-modal';
+
+const customStyles = {
+  content: {
+    top: '40%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)'
+  }
+};
+
 class EventShow extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      modalIsOpen: false
+    };
+
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+
+  openModal() {
+    this.setState({ modalIsOpen: true });
+  }
+
+
+
+  closeModal() {
+    this.setState({ modalIsOpen: false });
   }
 
   componentDidMount() {
     this.props.fetchEvent(this.props.match.params.eventId);
+
     window.scrollTo(0, 0);
   }
 
@@ -30,7 +60,44 @@ class EventShow extends React.Component {
                   Price: {this.props.event.price}$
 
                 </div>
-                <button className="tickets-button">Tickets</button>
+                <div>
+                  <button className="show-bar-button-ticket" onClick={this.openModal}>Tickets</button>
+                  <Modal
+                    isOpen={this.state.modalIsOpen}
+
+                    onRequestClose={this.closeModal}
+                    style={customStyles}
+                    contentLabel="Example Modal"
+                  >
+
+                    <div className="tickets-header-bar">
+                      <div className="tickets-header-text">Tickets</div>
+                      <div>
+                        <button className="tickets-header-bar-x" onClick={this.closeModal}>X</button>
+                      </div>
+                    </div>
+
+                    <div className="tickets-body">
+                      <div className="tickets-title">
+                        {this.props.event.title}
+                      </div>
+                    </div>
+                    <div className="tickets-modal-footer">
+                      <div className="tickets-modal-footer-left">
+                        <div>
+                          Qty: this.props,
+                        </div>
+                        <div>
+                          USD: $5.00
+
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                  </Modal>
+                </div>
               </div>
 
             </div>
