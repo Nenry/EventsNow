@@ -5,6 +5,10 @@ import {
   RECEIVE_BOOKMARKS,
   REMOVE_BOOKMARK
 } from '../actions/bookmark_actions';
+import {
+  RECEIVE_CURRENT_USER
+} from '../actions/session_actions';
+
 
 const bookmarkReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -20,6 +24,8 @@ const bookmarkReducer = (state = {}, action) => {
       let newState = merge({}, state);
       delete newState[action.bookmarkId];
       return newState;
+    case RECEIVE_CURRENT_USER:
+      return merge({}, state, action.payload.bookmarks);
     default:
       return state;
   }

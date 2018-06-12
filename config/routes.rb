@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resource :session, only: [:new, :create, :destroy]
     resources :events, only: [:create, :show, :destroy, :update, :index]
     resources :bookmarks, only: [:create, :destroy, :index]
+    resources :tickets, only: [:create, :destroy, :index]
   end
 
 end

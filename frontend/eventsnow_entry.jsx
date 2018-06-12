@@ -5,6 +5,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import { fetchEvents, fetchEvent, createEvent, editEvent, deleteEvent, updateEvent } from './actions/event_actions';
 import { createBookmark, deleteBookmark, fetchBookmarks } from './actions/bookmark_actions';
+import { createTicket, deleteTicket, fetchAllTickets } from './actions/ticket_actions';
 document.addEventListener('DOMContentLoaded', () => {
 
   let store;
@@ -35,6 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.createBookmark = createBookmark;
   window.deleteBookmark = deleteBookmark;
   window.fetchBookmarks = fetchBookmarks;
+  window.createTicket = createTicket;
+  window.deleteTicket = deleteTicket;
+  window.fetchAllTickets = fetchAllTickets;
 
   ReactDOM.render(<Root store={store} />, root);
 });
