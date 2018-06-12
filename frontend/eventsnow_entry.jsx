@@ -3,17 +3,17 @@ import ReactDOM from 'react-dom';
 import { signup, login, logout } from './actions/session_actions';
 import configureStore from './store/store';
 import Root from './components/root';
-import { fetchEvents, fetchEvent, createEvent,  editEvent, deleteEvent, updateEvent} from './actions/event_actions';
-
+import { fetchEvents, fetchEvent, createEvent, editEvent, deleteEvent, updateEvent } from './actions/event_actions';
+import { createBookmark, deleteBookmark, fetchBookmarks } from './actions/bookmark_actions';
 document.addEventListener('DOMContentLoaded', () => {
 
   let store;
   if (window.currentUser) {
     const preloadedState = {
       entities: {
-        users: {[window.currentUser.id]: window.currentUser}
+        users: { [window.currentUser.id]: window.currentUser }
       },
-        session: { id: window.currentUser.id }
+      session: { id: window.currentUser.id }
     };
     store = configureStore(preloadedState);
     delete window.currentUser;
@@ -26,11 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.login = login;
   // window.logout = logout;
   window.store = store;
-  window.fetchEvents = fetchEvents;
-  window.fetchEvent = fetchEvent;
-  window.createEvent = createEvent;
-  window.editEvent = editEvent;
-  window.deleteEvent = deleteEvent;
-  window.updateEvent = updateEvent;
-  ReactDOM.render(<Root store={store}/>, root);
+  // window.fetchEvents = fetchEvents;
+  // window.fetchEvent = fetchEvent;
+  // window.createEvent = createEvent;
+  // window.editEvent = editEvent;
+  // window.deleteEvent = deleteEvent;
+  // window.updateEvent = updateEvent;
+  window.createBookmark = createBookmark;
+  window.deleteBookmark = deleteBookmark;
+  window.fetchBookmarks = fetchBookmarks;
+
+  ReactDOM.render(<Root store={store} />, root);
 });

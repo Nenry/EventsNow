@@ -11,6 +11,7 @@ import CreateEventContainer from './events/create_event_container';
 import EventIndexContainer from './events/event_index_container';
 import EventShowContainer from './events/event_show_container';
 import EditEventContainer from './events/edit_event_container';
+import UserDashContainer from './user_dash/users_dash_container';
 const App = () => (
   <div className="root-div">
     <header>
@@ -20,6 +21,7 @@ const App = () => (
     </header>
 
     <Switch>
+      <Route exact path="/users/:id" component={UserDashContainer} />
       <Route exact path="/events/new" component={CreateEventContainer} />
       <Route exact path="/events/:eventId/edit" component={EditEventContainer} />
       <Route exact path="/events/:eventId" component={EventShowContainer} />

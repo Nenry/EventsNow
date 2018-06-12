@@ -1,7 +1,7 @@
 class Api::BookmarksController < ApplicationController
 
   def create
-    @bookmark = bookmark.new(bookmark_params)
+    @bookmark = Bookmark.new(bookmark_params)
     @bookmark.user_id = current_user.id
 
     if @bookmark.save
@@ -10,6 +10,11 @@ class Api::BookmarksController < ApplicationController
       render json: @bookmark.errors.full_messages
     end
 
+  end 
+
+  def index 
+    @bookmarks = current_user.bookmarks
+    render :index
   end 
 
   def destroy 
@@ -26,4 +31,5 @@ class Api::BookmarksController < ApplicationController
   def bookmark_params
     params.require(:bookmark).permit(:event_id, :user_id)
   end 
+
 end
