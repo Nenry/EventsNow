@@ -112,7 +112,7 @@ class EventForm extends React.Component {
           {this.renderErrors("Img")}
           <TextInput onChange={this.update('category_id')} value={this.state.category_id} label="Category" />
           {this.renderErrors("Category")}
-          <NumberInput onChange={this.update('tickets_left')} value={this.tickets_left} label='Tickets' />
+          <NumberInput onChange={this.update('total_tickets')} value={this.total_tickets} label='Tickets' />
           {this.renderErrors("Tickets")}
           <NumberInput onChange={this.update('price')} value={this.state.price} label="Price" />
           {this.renderErrors("Price")}

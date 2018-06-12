@@ -159,9 +159,11 @@
   margin-top: 10px;
   padding-left: 10px;
   width: 665px;
-  border-left: 10px solid blue;
+  border-left: 10px solid rgb(89, 163, 197);
   margin-left: 15px; // text-align: center;
   margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .tickets-title {
@@ -171,10 +173,37 @@
   align-items: center; // justify-content: center;
 }
 
+.tickets-modal-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
 .tickets-modal-footer-left {
   display: flex;
   justify-content: space-between;
   width: 200px;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  margin-left: 20px; // margin-bottom: 20px;
+  align-items: center;
+  font-family: Benton Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
+  color: rgb(128, 122, 122);
+}
+
+.show-bar-button-checkout {
+  background-color: rgb(22, 167, 22);
+  color: white; // width: 97%;
+  display: flex;
+  justify-content: center;
+  width: 80px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Benton Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
+  margin-right: 10px;
+}
+
+.tickets-quantity {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
 }

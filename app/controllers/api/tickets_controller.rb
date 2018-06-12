@@ -13,6 +13,7 @@ class Api::TicketsController < ApplicationController
 
   def destroy
     @ticket = Ticket.find_by(id: params[:id])
+    @ticket.buyer_id = current_user.id
 
     if @ticket.buyer_id  == current_user.id && @ticket.destroy
       render :show

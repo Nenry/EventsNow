@@ -81,6 +81,21 @@ class EventShow extends React.Component {
                       <div className="tickets-title">
                         {this.props.event.title}
                       </div>
+                      <div className="tickets-quantity">
+                        <div className="custom-select">
+                          <select name="quantitity">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="fiat">Fiat</option>
+                            <option value="audi">Audi</option>
+                          </select>
+
+
+                        </div>
+
+
+
+                      </div>
                     </div>
                     <div className="tickets-modal-footer">
                       <div className="tickets-modal-footer-left">
@@ -92,6 +107,8 @@ class EventShow extends React.Component {
 
                         </div>
                       </div>
+
+                      <button className="show-bar-button-checkout" onClick={() => this.props.createTicket({ event_id: this.props.event.id })}>Check Out</button>
 
                     </div>
 
