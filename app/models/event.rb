@@ -33,7 +33,11 @@ class Event < ApplicationRecord
   end 
 
   def remaining_tickets
-    self.total_tickets - Ticket.where(event_id: self.id).count
+    remaining_tickets = 0
+    Ticket.where(event_id: self.id).each do |ticketobj|
+      remaining_tickets += ticketobj.tickets_count
+    end 
+    self.total_tickets - remaining_tickets
   end 
 
   belongs_to :user,

@@ -1,6 +1,6 @@
 class Ticket < ApplicationRecord
   validates :buyer_id, :event_id, presence: true
-  before_validation :ensure_tickets_avail
+  validate :ensure_tickets_avail
   
   belongs_to :buyer,
   primary_key: :id,
@@ -13,7 +13,9 @@ class Ticket < ApplicationRecord
   class_name: :Event
 
   def ensure_tickets_avail
-    Event.find(self.event_id).remaining_tickets > 0
+    unless Event.find(self.event_id).remaining_tickets >= self.tickets_count
+      errors[:event] << "does not have enough tickets to sell"
+    end 
   end 
 
 end

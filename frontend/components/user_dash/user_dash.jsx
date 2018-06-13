@@ -49,7 +49,7 @@ class UserDash extends React.Component {
 
       return (
         <div className="users-dash-wrapper">
-          <div className="user-modal">
+          {/* <div className="user-modal">
             <button onClick={this.openModal}>Open Modal</button>
             <Modal
               isOpen={this.state.modalIsOpen}
@@ -70,7 +70,7 @@ class UserDash extends React.Component {
                 <button onClick={this.closeModal}>close</button>
               </form>
             </Modal>
-          </div>
+          </div> */}
 
           <div className="user-events-bar">
             Saved Events

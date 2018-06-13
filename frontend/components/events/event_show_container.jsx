@@ -8,7 +8,8 @@ const msp = (state, ownProps) => {
   return ({
     event: state.entities.events[ownProps.match.params.eventId],
     session: state.session,
-    currentBookmarks: state.currentBookmarks
+    currentBookmarks: state.currentBookmarks,
+    errors: state.errors.tickets
 
   });
 };

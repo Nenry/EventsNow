@@ -30,6 +30,6 @@ class Api::TicketsController < ApplicationController
   end
   
   def ticket_params 
-    params.require(:ticket).permit(:event_id, :buyer_id)
+    params.require(:ticket).permit(:event_id, :buyer_id, :tickets_count)
   end 
 end
