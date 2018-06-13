@@ -25,8 +25,6 @@ const ticketReducer = (state = {}, action) => {
       let newState = merge({}, state);
       delete newState[action.ticketId];
       return new newState;
-    case RECEIVE_CURRENT_USER:
-      return merge({}, state, action.payload.tickets);
     default:
       return state;
   }

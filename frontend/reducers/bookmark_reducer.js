@@ -24,8 +24,6 @@ const bookmarkReducer = (state = {}, action) => {
       let newState = merge({}, state);
       delete newState[action.bookmarkId];
       return newState;
-    case RECEIVE_CURRENT_USER:
-      return merge({}, state, action.payload.bookmarks);
     default:
       return state;
   }
