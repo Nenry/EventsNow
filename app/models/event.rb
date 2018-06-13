@@ -22,7 +22,7 @@
 
 class Event < ApplicationRecord
   validates :title, presence: true, uniqueness: true
-  validates :body, :date, :time_start, :time_end, :address, :city, :state, :host_id, :category_id,
+  validates :body, :date, :time_start, :time_end, :address, :city, :state, :host_id, :category,
   :total_tickets, :img_url, :price, presence: true
 
   before_validation :ensure_img_url

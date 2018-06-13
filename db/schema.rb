@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_13_040206) do
+ActiveRecord::Schema.define(version: 2018_06_13_164538) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 2018_06_13_040206) do
     t.string "city", null: false
     t.string "state", null: false
     t.integer "host_id", null: false
-    t.integer "category_id", null: false
     t.integer "total_tickets", null: false
     t.string "img_url", null: false
     t.integer "price", null: false
@@ -41,7 +40,7 @@ ActiveRecord::Schema.define(version: 2018_06_13_040206) do
     t.datetime "updated_at", null: false
     t.string "time_start", null: false
     t.string "time_end", null: false
-    t.index ["category_id"], name: "index_events_on_category_id"
+    t.string "category"
     t.index ["city"], name: "index_events_on_city"
     t.index ["host_id"], name: "index_events_on_host_id"
     t.index ["state"], name: "index_events_on_state"
