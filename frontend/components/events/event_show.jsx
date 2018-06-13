@@ -100,7 +100,6 @@ class EventShow extends React.Component {
 
 
 
-
           </div>
         </div>
         <div className="tickets-modal-footer">
@@ -112,6 +111,7 @@ class EventShow extends React.Component {
             </div>
           </div>
 
+          {!this.props.currentUser ? <div>Please login to purchase tickets</div> : <div></div>}
           <button className="show-bar-button-checkout" onClick={() => this.handleCheckout()}>Check Out</button>
 
         </div>

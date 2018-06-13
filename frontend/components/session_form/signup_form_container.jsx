@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import React from 'react';
 
-const msp = ({ errors }) => ({
-  errors: errors.session,
+const msp = (state) => ({
+  errors: state.errors.session,
   formType: 'signup',
   navLink: <Link to="/login">Login</Link>
 });
