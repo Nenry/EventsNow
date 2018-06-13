@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :events, only: [:create, :show, :destroy, :update, :index]
     resources :bookmarks, only: [:create, :destroy, :index]
     resources :tickets, only: [:create, :destroy, :index]
+    resources :categories, only: [:show, :index]
   end
 
 end

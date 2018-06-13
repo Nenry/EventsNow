@@ -11,6 +11,29 @@
 # yr, month, date
 Event.destroy_all
 User.destroy_all
+Category.destroy_all
+
+Category.create({title: 'Select a category'})
+Category.create({title: 'Auto, Boat & Air'})
+Category.create({title: 'Business'})
+Category.create({title: 'Charity Causes'})
+Category.create({title: 'Community & Culture'})
+Category.create({title: 'Family & Education'})
+Category.create({title: 'Fashion & Beauty'})
+Category.create({title: 'Film, Media & Entertainment'})
+Category.create({title: 'Food & Drink'})
+Category.create({title: 'Government & Politics'})
+Category.create({title: 'Health & Wellness'})
+Category.create({title: 'Hobbies & Special Interest'})
+Category.create({title: 'Home & Lifestyle'})
+Category.create({title: 'Music'})
+Category.create({title: 'Other'})
+Category.create({title: 'Performing & Visual Arts'})
+Category.create({title: 'Religion & Spirituality'})
+Category.create({title: 'School Activities'})
+Category.create({title: 'Science & Technology'})
+Category.create({title: 'Seasonal & Holiday'})
+Category.create({title: 'Sport & Fitness'})
 demo_user = User.create({email:"User@Demo.com", first_name: "Russell", last_name: "Disney", password: "password"})
 
 Event.create({
@@ -47,7 +70,7 @@ Refreshments and snacks are provided!',
   city: "San Francisco",
   state: "CA",
   host_id: 1,
-  category: "Other",
+  category_id: "5",
   total_tickets: 500,
   img_url: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F45189173%2F250588563459%2F1%2Foriginal.jpg?w=800&auto=compress&rect=0%2C0%2C800%2C400&s=26199b7c7e95896e0b604ccc7c3721f6",
   price: 0
@@ -85,7 +108,7 @@ HOW: Ready to start hacking?? REGISTER Here!",
   city: "San Francisco",
   state: "CA",
   host_id: 1,
-  category: "Other",
+  category_id: "1",
   total_tickets: 256,
   img_url: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F44460600%2F252434965428%2F1%2Foriginal.jpg?w=800&auto=compress&rect=0%2C0%2C690%2C345&s=535b5433b749f9d854681ab19a6229dd",
   price: 0,
@@ -182,7 +205,7 @@ Event.create({
   city: "San Francisco",
   state: "CA",
   host_id: 1,
-  category: "Other",
+  category_id: 2,
   total_tickets: 3,
   img_url: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F44241255%2F9608873553%2F1%2Foriginal.jpg?w=800&auto=compress&rect=0%2C0%2C708%2C354&s=b380bc279e020b856235910e8ca0f22e",
   price: 15,
@@ -199,7 +222,7 @@ Event.create({
 #   city: "San Francisco",
 #   state: "CA",
 #   host_id: 4,
-#   category: "Other",
+#   category_id: 5,
 #   total_tickets: 3,
 #   img_url: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F44241255%2F9608873553%2F1%2Foriginal.jpg?w=800&auto=compress&rect=0%2C0%2C708%2C354&s=b380bc279e020b856235910e8ca0f22e",
 #   price: 15,
@@ -211,3 +234,6 @@ Event.create({
 #   method: 'DELETE',
 #   url: '/api/events/5'
 # })
+
+
+

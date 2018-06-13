@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_13_164538) do
+ActiveRecord::Schema.define(version: 2018_06_13_181925) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,12 @@ ActiveRecord::Schema.define(version: 2018_06_13_164538) do
     t.index ["event_id", "user_id"], name: "index_bookmarks_on_event_id_and_user_id", unique: true
     t.index ["event_id"], name: "index_bookmarks_on_event_id"
     t.index ["user_id"], name: "index_bookmarks_on_user_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "title", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "events", force: :cascade do |t|
@@ -40,7 +46,7 @@ ActiveRecord::Schema.define(version: 2018_06_13_164538) do
     t.datetime "updated_at", null: false
     t.string "time_start", null: false
     t.string "time_end", null: false
-    t.string "category"
+    t.integer "category_id"
     t.index ["city"], name: "index_events_on_city"
     t.index ["host_id"], name: "index_events_on_host_id"
     t.index ["state"], name: "index_events_on_state"

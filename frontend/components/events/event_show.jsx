@@ -217,6 +217,8 @@ class EventShow extends React.Component {
                   </div>
                 </div>
               </div>
+              <div className="tag-header">TAGS</div>
+              <div className="category">{this.props.event.category.title}</div>
             </div>
           </div>
 

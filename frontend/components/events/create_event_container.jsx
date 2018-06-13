@@ -7,7 +7,7 @@ const msp = state => {
   return ({
     event: {
       title: '', body: '', date: '', address: '',
-      city: '', state: '', category: '', total_tickets: '', price: '', img_url: '',
+      city: '', state: '', category_id: 0, total_tickets: '', price: '', img_url: '',
       time_start: '', time_end: ''
     },
     formType: "Publish Event",

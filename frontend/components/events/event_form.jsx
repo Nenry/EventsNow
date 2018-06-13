@@ -113,8 +113,8 @@ class EventForm extends React.Component {
           {this.renderErrors("Date")}
           <TextInput onChange={this.update('img_url')} value={this.state.img_url} label='Image URL'></TextInput>
           {this.renderErrors("Img")}
-          <TextInput onChange={this.update('category')} value={this.state.category} label="Category" />
-          {this.renderErrors("Category")}
+          {/* <TextInput onChange={this.update('category')} value={this.state.category} label="Category" />
+          {this.renderErrors("Category")} */}
           <NumberInput onChange={this.update('total_tickets')} value={this.total_tickets} label='Tickets' />
           {this.renderErrors("Tickets")}
           <NumberInput onChange={this.update('price')} value={this.state.price} label="Price" />
@@ -129,6 +129,30 @@ class EventForm extends React.Component {
             <input type="time" onChange={this.update('time_end')} value={this.state.time_end} label="Ending Time" />
             {this.props.errors.find(error => error.includes('Time end')) ? <div className="session-errors" >Starting time can't be blank</div> : <div></div>}
           </div>
+
+          <select onChange={this.update('category_id')} name="Categories">
+            <option value="1" >Select a category</option>
+            <option value="2" >Auto, Boat & Air</option>
+            <option value="3">Business</option>
+            <option value="4">Charity Causes</option>
+            <option value="5">Community & Culture</option>
+            <option value="6">Family & Education</option>
+            <option value="7">Fashion & Beauty</option>
+            <option value="8">Film, Media & Entertainment</option>
+            <option value="9">Food & Drink</option>
+            <option value="10">Government & Politics</option>
+            <option value="11">Health & Wellness</option>
+            <option value="12">Hobbies & Special Interest</option>
+            <option value="13">Home & Lifestyle</option>
+            <option value="14">Music</option>
+            <option value="15">Other</option>
+            <option value="16">Performing & Visual Arts</option>
+            <option value="17">Religion & Spirituality</option>
+            <option value="18">School Activities</option>
+            <option value="19">Science & Technology</option>
+            <option value="20">Seasonal & Holiday</option>
+            <option value="21">Sport & Fitness</option>
+          </select>
 
           {/* <label>Price</label>
           // <input type="number" onChange={this.update('price')} value={this.state.price} />

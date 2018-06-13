@@ -22,7 +22,7 @@
 
 class Event < ApplicationRecord
   validates :title, presence: true, uniqueness: true
-  validates :body, :date, :time_start, :time_end, :address, :city, :state, :host_id, :category,
+  validates :body, :date, :time_start, :time_end, :address, :city, :state, :host_id, :category_id,
   :total_tickets, :img_url, :price, presence: true
 
   before_validation :ensure_img_url
@@ -56,10 +56,10 @@ class Event < ApplicationRecord
   class_name: :Ticket
   
 
-  # belongs_to :category,
-  # primary_key: :id,
-  # foreign_key: :category_id,
-  # class_name: :Category
+  belongs_to :category,
+  primary_key: :id,
+  foreign_key: :category_id,
+  class_name: :Category
   
 
 
