@@ -17,7 +17,7 @@ class Api::CategoriesController < ApplicationController
   end 
 
   def show 
-    @category = Category.find_by(title: params[:title])
+    @category = Category.find_by(id: params[:id])
     render :show
   end 
 

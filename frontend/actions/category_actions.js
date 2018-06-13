@@ -27,6 +27,6 @@ export const fetchAllCategories = () => dispatch => (
 
 export const fetchCategory = (id) => dispatch => (
   CategoryApiUtil.fetchCategory(id).then(category => (
-    dispatch(receiveCategory)
+    dispatch(receiveCategory(category))
   ))
 );

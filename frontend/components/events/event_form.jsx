@@ -131,29 +131,37 @@ class EventForm extends React.Component {
           </div>
 
           <select onChange={this.update('category_id')} name="Categories">
-            <option value="1" >Select a category</option>
-            <option value="2" >Auto, Boat & Air</option>
-            <option value="3">Business</option>
-            <option value="4">Charity Causes</option>
-            <option value="5">Community & Culture</option>
-            <option value="6">Family & Education</option>
-            <option value="7">Fashion & Beauty</option>
-            <option value="8">Film, Media & Entertainment</option>
-            <option value="9">Food & Drink</option>
-            <option value="10">Government & Politics</option>
-            <option value="11">Health & Wellness</option>
-            <option value="12">Hobbies & Special Interest</option>
-            <option value="13">Home & Lifestyle</option>
-            <option value="14">Music</option>
-            <option value="15">Other</option>
-            <option value="16">Performing & Visual Arts</option>
-            <option value="17">Religion & Spirituality</option>
-            <option value="18">School Activities</option>
-            <option value="19">Science & Technology</option>
-            <option value="20">Seasonal & Holiday</option>
-            <option value="21">Sport & Fitness</option>
+            <option value="1"> Select a category></option>
+            <option value="2">Music</option>
+            <option value="3">Food & Drinks</option>
+            <option value="4">Classes</option>
+            <option value="5">Arts</option>
+            <option value="6">Parties</option>
+            <option value="7">Sport & Wellness</option>
+            <option value="8">Networking</option>
           </select>
 
+          {/* <option value="1" >Select a category</option>
+          <option value="2" >Auto, Boat & Air</option>
+          <option value="3">Business</option>
+          <option value="4">Charity Causes</option>
+          <option value="5">Community & Culture</option>
+          <option value="6">Family & Education</option>
+          <option value="7">Fashion & Beauty</option>
+          <option value="8">Film, Media & Entertainment</option>
+          <option value="9">Food & Drink</option>
+          <option value="10">Government & Politics</option>
+          <option value="11">Health & Wellness</option>
+          <option value="12">Hobbies & Special Interest</option>
+          <option value="13">Home & Lifestyle</option>
+          <option value="14">Music</option>
+          <option value="15">Other</option>
+          <option value="16">Performing & Visual Arts</option>
+          <option value="17">Religion & Spirituality</option>
+          <option value="18">School Activities</option>
+          <option value="19">Science & Technology</option>
+          <option value="20">Seasonal & Holiday</option>
+          <option value="21">Sport & Fitness</option> */}
           {/* <label>Price</label>
           // <input type="number" onChange={this.update('price')} value={this.state.price} />
           // <label>Date</label>

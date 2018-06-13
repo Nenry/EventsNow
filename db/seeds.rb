@@ -13,27 +13,42 @@ Event.destroy_all
 User.destroy_all
 Category.destroy_all
 
+
+
 Category.create({title: 'Select a category'})
-Category.create({title: 'Auto, Boat & Air'})
-Category.create({title: 'Business'})
-Category.create({title: 'Charity Causes'})
-Category.create({title: 'Community & Culture'})
-Category.create({title: 'Family & Education'})
-Category.create({title: 'Fashion & Beauty'})
-Category.create({title: 'Film, Media & Entertainment'})
-Category.create({title: 'Food & Drink'})
-Category.create({title: 'Government & Politics'})
-Category.create({title: 'Health & Wellness'})
-Category.create({title: 'Hobbies & Special Interest'})
-Category.create({title: 'Home & Lifestyle'})
 Category.create({title: 'Music'})
-Category.create({title: 'Other'})
-Category.create({title: 'Performing & Visual Arts'})
-Category.create({title: 'Religion & Spirituality'})
-Category.create({title: 'School Activities'})
-Category.create({title: 'Science & Technology'})
-Category.create({title: 'Seasonal & Holiday'})
-Category.create({title: 'Sport & Fitness'})
+Category.create({title: 'Food & Drinks'})
+Category.create({title: 'Classes'})
+Category.create({title: 'Arts'})
+Category.create({title: 'Parties'})
+Category.create({title: 'Sport & Wellness'})
+Category.create({title: 'Networking'})
+
+
+
+
+
+# Category.create({title: 'Select a category'})
+# Category.create({title: 'Auto, Boat & Air'})
+# Category.create({title: 'Business'})
+# Category.create({title: 'Charity Causes'})
+# Category.create({title: 'Community & Culture'})
+# Category.create({title: 'Family & Education'})
+# Category.create({title: 'Fashion & Beauty'})
+# Category.create({title: 'Film, Media & Entertainment'})
+# Category.create({title: 'Food & Drink'})
+# Category.create({title: 'Government & Politics'})
+# Category.create({title: 'Health & Wellness'})
+# Category.create({title: 'Hobbies & Special Interest'})
+# Category.create({title: 'Home & Lifestyle'})
+# Category.create({title: 'Music'})
+# Category.create({title: 'Other'})
+# Category.create({title: 'Performing & Visual Arts'})
+# Category.create({title: 'Religion & Spirituality'})
+# Category.create({title: 'School Activities'})
+# Category.create({title: 'Science & Technology'})
+# Category.create({title: 'Seasonal & Holiday'})
+# Category.create({title: 'Sport & Fitness'})
 demo_user = User.create({email:"User@Demo.com", first_name: "Russell", last_name: "Disney", password: "password"})
 
 Event.create({

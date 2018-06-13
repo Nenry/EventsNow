@@ -12,6 +12,7 @@ import EventIndexContainer from './events/event_index_container';
 import EventShowContainer from './events/event_show_container';
 import EditEventContainer from './events/edit_event_container';
 import UserDashContainer from './user_dash/users_dash_container';
+import CategoryIndexContainer from './categories/category_index_container';
 const App = () => (
   <div className="root-div">
     <header>
@@ -21,6 +22,7 @@ const App = () => (
     </header>
 
     <Switch>
+      <Route exact path="/categories" component={CategoryIndexContainer} />
       <Route exact path="/users/:id" component={UserDashContainer} />
       <Route exact path="/events/new" component={CreateEventContainer} />
       <Route exact path="/events/:eventId/edit" component={EditEventContainer} />

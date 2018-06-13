@@ -1,1 +1,1 @@
-json.extract! @category, :id, :title :events
+json.extract! @category, :id, :title, :events
