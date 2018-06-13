@@ -14,6 +14,11 @@ const EventIndexItem = props => (
             {props.event.time_start}
           </div>
 
+          <div>
+
+            {props.ticketCount ? `Tickets: ${props.ticketCount}` : <div></div>}
+          </div>
+
         </div>
         <div className="hp-event-title">
           {props.event.title}

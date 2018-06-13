@@ -232,3 +232,18 @@
   align-items: center;
   font-size: 20px;
 }
+
+.tickets-quantity {
+  font-family: Benton Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.ticket-quantity-input {
+  border: 1px solid black;
+  font-family: Benton Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
+  width: 80px;
+  text-align: center;
+  margin-top: 10px;
+}

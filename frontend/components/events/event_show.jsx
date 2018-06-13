@@ -88,14 +88,16 @@ class EventShow extends React.Component {
             {this.props.event.title}
           </div>
           <div className="tickets-quantity">
-            <div className="custom-select">
+            <div>
 
-              <input type="number" onChange={this.update('ticketCount')} value={this.state.ticketCount} />
-              {this.renderErrors("Not enough")}
-
-
-
+              Ticket Quantity
             </div>
+            <input className="ticket-quantity-input" type="number" onChange={this.update('ticketCount')} value={this.state.ticketCount} />
+            {this.renderErrors("Not enough")}
+
+
+
+
 
 
 
