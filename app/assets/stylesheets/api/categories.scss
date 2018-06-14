@@ -1,3 +1,31 @@
 // Place all the styles related to the api::categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.categories-index-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // justify-items: center; // justify-content: center;
+  align-self: center;
+  text-align: center;
+  width: 55%;
+}
+
+.music {
+  background-image: url("https://farm1.staticflickr.com/883/41883189545_99f31dda24_o.jpg");
+  height: 200px;
+  background-size: 400px 200px;
+  background-repeat: no-repeat;
+}
+
+.categories-show-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.categories-show-header {
+  font-family: Benton Sans, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}

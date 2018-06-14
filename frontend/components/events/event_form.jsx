@@ -131,7 +131,7 @@ class EventForm extends React.Component {
           </div>
 
           <select onChange={this.update('category_id')} name="Categories">
-            <option value="1"> Select a category></option>
+            <option value="1"> Select a category</option>
             <option value="2">Music</option>
             <option value="3">Food & Drinks</option>
             <option value="4">Classes</option>
@@ -141,7 +141,7 @@ class EventForm extends React.Component {
             <option value="8">Networking</option>
           </select>
 
-          {/* <option value="1" >Select a category</option>
+          {/* <option value="1" >Se lect a category</option>
           <option value="2" >Auto, Boat & Air</option>
           <option value="3">Business</option>
           <option value="4">Charity Causes</option>

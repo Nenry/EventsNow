@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
-import { CategoryShow } from './category_show';
+import CategoryShow from './category_show';
 import { fetchAllCategories, fetchCategory } from '../../actions/category_actions';
-const msp = state =>
+const msp = (state, ownProps) =>
   ({
-    categories: Object.values(state.entities.categories)
+    category: state.entities.categories[ownProps.match.params.categoryId]
   });
 
 

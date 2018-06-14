@@ -18,12 +18,16 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state);
-    <Redirect to='/' />
+    <Redirect to='/' />;
   }
 
   handleDemo(e) {
     e.preventDefault();
     this.props.processForm({ email: "User@Demo.com", password: "password" });
+  }
+
+  componentWillUnmount() {
+    this.props.clearErrors();
   }
 
 
