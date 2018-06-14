@@ -251,4 +251,40 @@
 .tag-header {
   font-family: Benton Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
   font-size: 12px;
+  font-weight: 650;
+  color: #272D35; // margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.tag-detail {
+  font-family: Benton Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
+  border: 1px solid rgb(179, 179, 179);
+  width: 15%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.tag-detail:hover {
+  font-family: Benton Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
+  border: 1px solid #0195D3;
+  width: 15%;
+  text-align: center;
+  border-radius: 10px;
+  color: #0195D3;
+}
+
+.tag-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  height: 50px;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.tag-detail-container {
+  width: 100%;
 }

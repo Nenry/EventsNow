@@ -141,7 +141,12 @@ class EventShow extends React.Component {
     );
   }
 
-
+  convertDate(date) {
+    let newDate = date.split("-");
+    newDate.push(newDate.shift());
+    newDate = newDate.join("/");
+    return newDate;
+  };
 
 
   TicketModal2() {
@@ -226,6 +231,9 @@ class EventShow extends React.Component {
                     <div className="sidebar-detail-header">
 
                       Date and Time
+                      <div>
+                        {this.convertDate(this.props.event.date)}
+                      </div>
                     </div>
                     {this.props.event.time_start}-{this.props.event.time_end}
                   </div>
@@ -250,9 +258,12 @@ class EventShow extends React.Component {
                 {this.props.event.category.id === 1 ?
                   <div></div> :
 
-                  <div>
+                  <div className="tag-container">
                     <div className="tag-header">TAGS</div>
-                    <div>{this.props.event.category.title}</div>
+
+                    <Link to={`/categories/${this.props.event.category.id}`} className="tag-detail">{this.props.event.category.title}</Link>
+
+
                   </div>
 
                 }</div>

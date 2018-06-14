@@ -111,6 +111,7 @@ class EventForm extends React.Component {
           {this.renderErrors("State")}
           <DateInput onChange={this.update('date')} value={this.state.date} label='Date'></DateInput>
           {this.renderErrors("Date")}
+          {this.renderErrors("date")}
           <TextInput onChange={this.update('img_url')} value={this.state.img_url} label='Image URL'></TextInput>
           {this.renderErrors("Img")}
           {/* <TextInput onChange={this.update('category')} value={this.state.category} label="Category" />
@@ -128,6 +129,7 @@ class EventForm extends React.Component {
             <label>Ending Time</label>
             <input type="time" onChange={this.update('time_end')} value={this.state.time_end} label="Ending Time" />
             {this.props.errors.find(error => error.includes('Time end')) ? <div className="session-errors" >Starting time can't be blank</div> : <div></div>}
+            {this.renderErrors("end")}
           </div>
 
           <select onChange={this.update('category_id')} name="Categories">
