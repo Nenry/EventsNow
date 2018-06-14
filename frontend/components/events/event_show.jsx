@@ -178,8 +178,11 @@ class EventShow extends React.Component {
               <img className="event-show-banner" src={this.props.event.img_url} alt="" />
 
               <div className="event-side-banner">
-                {this.props.event.title}
-                <div>
+                <div className="event-side-title">
+                  {this.props.event.title}
+
+                </div>
+                <div className="event-side-title">
                   Price: {this.props.event.price}$
 
                 </div>

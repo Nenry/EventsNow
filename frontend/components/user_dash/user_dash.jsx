@@ -16,7 +16,9 @@ class UserDash extends React.Component {
   constructor() {
     super();
     this.state = {
-      activeWindow: 1
+      activeWindow: 1,
+      clicked1: true,
+      clicked2: false
     };
 
 
@@ -81,10 +83,10 @@ class UserDash extends React.Component {
         <div className="users-dash-wrapper">
 
           <div className="user-events-bar">
-            <button onClick={() => this.setState({ activeWindow: 1 })}>
-              Saved Events |
+            <button className={this.state.clicked1 ? "saved-event-button" : ""} onClick={() => this.setState({ activeWindow: 1, clicked1: !this.state.clicked1, clicked2: !this.state.clicked2 })}>
+              Saved Events
             </button>
-            <button onClick={() => this.setState({ activeWindow: 2 })}>
+            <button className={this.state.clicked2 ? "saved-event-button" : ""} onClick={() => this.setState({ activeWindow: 2, clicked2: !this.state.clicked2, clicked1: !this.state.clicked1 })}>
               &nbsp;Purchased Tickets
             </button>
           </div>

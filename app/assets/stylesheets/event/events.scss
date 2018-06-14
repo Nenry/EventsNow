@@ -23,8 +23,8 @@
   // margin-left: 20px;
   font-size: 18px;
   font-family: Benton Sans, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  display: flex; // justify-content: space-evenly;
-  align-items: center;
+  display: grid; // justify-content: space-evenly;
+  grid-template-columns: 0.7fr 0.3fr; // align-items: center;
   height: 100%;
   width: 100%; // margin-top: 25px;
 }
@@ -35,15 +35,15 @@
   // margin-left: 30px;
   // margin-top: 10px;
   display: grid;
-  grid-template-columns: 0.7fr 0.3fr;
+  grid-template-columns: 0.5fr 0.5fr;
   height: 100%;
   padding-bottom: 50px;
 }
 
 .event-side-banner {
-  padding-left: 10px;
   display: flex;
   height: 100%;
+  width: 100%;
   flex-direction: column;
   justify-content: space-evenly; // padding-left: 10px;
   background-color: rgb(211, 211, 211);
@@ -52,7 +52,7 @@
 
 .event-show-banner {
   height: 460px;
-  width: 91.8%;
+  width: 100%;
 }
 
 .grid-desc {
@@ -130,7 +130,7 @@
   padding: 10px;
   border-radius: 40px;
   font-family: Benton Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
-  margin-right: 10px;
+  margin-left: 20px;
 }
 
 .tickets-header-bar {
@@ -287,4 +287,21 @@
 
 .tag-detail-container {
   width: 100%;
+}
+
+.event-side-title {
+  margin-left: 20px;
+}
+
+.event-side-price {
+  margin-left: 20px;
+}
+
+.ticket-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  align-items: center;
 }

@@ -29,7 +29,7 @@ const EventIndexItem = props => {
             </div>
             <div className="event-time">
 
-              {(props.event.time_start)}
+              {(props.event.time_start)}&nbsp;
             </div>
 
             <div>
