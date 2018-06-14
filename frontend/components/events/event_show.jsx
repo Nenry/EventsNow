@@ -21,11 +21,32 @@ class EventShow extends React.Component {
       modalIsOpen: false,
       modalType: '',
       ticketCount: 1,
-      ticketProcess: "cart"
+      ticketProcess: "cart",
+      bookmarked: false,
+      bookmarkId: "",
     };
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+  }
+
+  bookmarked() {
+    const bookmarks = this.props.currentBookmarks;
+    const eventID = parseInt(this.props.match.params.eventId);
+
+    for (let i = 0; i < this.props.currentBookmarks.length; i++) {
+      let bookmark = bookmarks[i];
+      // console.log(bookmark.id);
+      if (bookmark.event_id === eventID) {
+        return bookmark.id;
+      }
+
+    }
+
+  }
+
+  currentBookmarkId() {
+    this.props.currentBookmarks.find((bookmark) => bookmark.event_id === this.props.match.params.eventId);
   }
 
   openModal(field) {
@@ -41,7 +62,7 @@ class EventShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchEvent(this.props.match.params.eventId);
-
+    this.props.fetchBookmarks();
     window.scrollTo(0, 0);
   }
 
@@ -142,7 +163,8 @@ class EventShow extends React.Component {
   }
 
   render() {
-    if (this.props.event) {
+
+    if (this.props.event && this.props.currentBookmarks) {
       return (
         <div className='event-show'>
 
@@ -178,7 +200,13 @@ class EventShow extends React.Component {
               <div className='show-bar'>
                 {this.props.session.id === this.props.event.host_id ? <Link to={`/events/${this.props.event.id}/edit`} className="show-bar-button">Edit</Link> : <div></div>}
                 {this.props.session.id === this.props.event.host_id ? <button onClick={(e) => this.handleDelete(e)} className="show-bar-button">Delete</button> : <div></div>}
-                <button onClick={() => this.props.createBookmark({ event_id: this.props.event.id })} className="show-bar-button">Bookmark</button>
+
+                {this.bookmarked() ?
+
+                  <button onClick={() => this.props.deleteBookmark(this.bookmarked())} className="show-bar-button">Unbookmark</button>
+                  :
+                  <button onClick={() => this.props.createBookmark({ event_id: this.props.event.id })} className="show-bar-button">Bookmark</button>
+                }
               </div>
               <div className="event-show-main-detail">
                 <div className="grid-desc">
