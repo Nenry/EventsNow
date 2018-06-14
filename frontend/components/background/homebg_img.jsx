@@ -1,9 +1,9 @@
 import React from 'react';
 import EventIndexContainer from '../events/event_index_container';
-
+import CategoryIndexContainer from '../categories/category_index_container';
 const homeBgImg = () => (
   <div className="home-bg-img">
-    <img className="background-banner" src="https://farm2.staticflickr.com/1759/28789455328_ed8f3a14bd_h.jpg" />
+    <img className="background-banner" src="https://c1.staticflickr.com/2/1751/40976644480_10d3ca9cce_b.jpg" />
     {/* img credit: https://500px.com/krunja */}
     <div className="home-flex">
       <div className="home-message">
@@ -15,6 +15,14 @@ const homeBgImg = () => (
     <div className="temp-events">
       <EventIndexContainer />
     </div>
+
+    <div className='home-categories'>
+      <div className='category-header'>
+        Categories
+      </div>
+      <CategoryIndexContainer />
+    </div>
+
 
 
   </div>
