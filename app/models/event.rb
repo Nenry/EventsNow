@@ -24,7 +24,7 @@ class Event < ApplicationRecord
   validates :title, presence: true, uniqueness: true
   validates :body, :date, :time_start, :time_end, :address, :city, :state, :host_id, :category_id,
   :total_tickets, :img_url, :price, presence: true
-  validate :valid_date, :valid_times
+  validate :valid_date
   
   before_validation :ensure_img_url 
 
@@ -33,11 +33,11 @@ class Event < ApplicationRecord
     # Photo by Redd Angelo on Unsplash
   end 
 
-  def valid_times
-    unless self.time_end > self.time_start 
-      errors[:event] << "ending time must be greater than starting time"
-    end 
-  end 
+  # def valid_times
+  #   unless self.time_start > self.time_end
+  #     errors[:event] << "ending time must be greater than starting time"
+  #   end 
+  # end 
 
   def valid_date
     unless self.date >= Date.today

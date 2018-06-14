@@ -118,7 +118,7 @@ WHEN: The Momentum Hackathon is split into two separate days! (No overnight hack
 9 AM - 4 PM June 10th
 
 HOW: Ready to start hacking?? REGISTER Here!",
-  date: Date.new(2018, 6, 9),
+  date: Date.new(2018, 6, 30),
   address: "44 Tehama Street",
   city: "San Francisco",
   state: "CA",
