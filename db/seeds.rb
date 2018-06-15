@@ -7,9 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-# db:reset to reset the id numbers 
+# db:reset to reset the id numbers
 # yr, month, date
 
+
+User.destroy_all
+Event.destroy_all
+Category.destroy_all
+Bookmark.destroy_all
+Ticket.destroy_all
 
 
 
@@ -68,7 +74,7 @@ demo_user = User.create({email:"User@Demo.com", first_name: "Russell", last_name
 
 # What do you need to know about taxes and fees with regards to cryptocurrencies?
 
-# Speakers: 
+# Speakers:
 # Natalia Karayaneva - CEO, Propy
 
 # Alex Voloshyn - CTO, Propy
@@ -751,6 +757,3 @@ Event.create({
 #   method: 'DELETE',
 #   url: '/api/events/5'
 # })
-
-
-
