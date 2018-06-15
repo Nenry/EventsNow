@@ -146,7 +146,7 @@ class EventShow extends React.Component {
     newDate.push(newDate.shift());
     newDate = newDate.join("/");
     return newDate;
-  };
+  }
 
 
   TicketModal2() {
