@@ -47,6 +47,8 @@ Category.create({title: 'Networking'})
 # Category.create({title: 'Science & Technology'})
 # Category.create({title: 'Seasonal & Holiday'})
 # Category.create({title: 'Sport & Fitness'})
+
+admin = User.create({email:"admin", first_name: "Russell", last_name: "Disney", password: "abc123"})
 demo_user = User.create({email:"User@Demo.com", first_name: "Russell", last_name: "Disney", password: "password"})
 
 # Event.create({
