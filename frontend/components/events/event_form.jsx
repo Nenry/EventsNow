@@ -8,7 +8,7 @@ class TextInput extends React.Component {
   render() {
     return (<div className="event-label-input">
       <label>{this.props.label}</label>
-      <input type="text" onChange={this.props.onChange} value={this.props.value} />
+      <input type="text" onChange={this.props.onChange} value={this.props.value} placeholder={this.props.placeholder} />
     </div>);
   }
 }
@@ -78,9 +78,9 @@ class EventForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
-    console.log(this.props.session);
-    console.log(this.props.currentUser);
+    // console.log(this.state);
+    // console.log(this.props.session);
+    // console.log(this.props.currentUser);
     if (this.state.time_start !== "" && this.state.time_end !== "")
       this.props.action(this.state).then((eventRes) => this.props.history.push(`/events/${eventRes.event.id}`));
 
@@ -116,7 +116,7 @@ class EventForm extends React.Component {
           <DateInput onChange={this.update('date')} value={this.state.date} label='Date'></DateInput>
           {this.renderErrors("Date")}
           {this.renderErrors("date")}
-          <TextInput onChange={this.update('img_url')} value={this.state.img_url} label='Image URL'></TextInput>
+          <TextInput onChange={this.update('img_url')} value={this.state.img_url} label='Image URL' placeholder='Not Required'></TextInput>
           {this.renderErrors("Img")}
           {/* <TextInput onChange={this.update('category')} value={this.state.category} label="Category" />
           {this.renderErrors("Category")} */}
