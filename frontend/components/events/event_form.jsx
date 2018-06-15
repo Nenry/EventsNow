@@ -21,7 +21,7 @@ class TextArea extends React.Component {
   render() {
     return (<div className="event-label-input">
       <label>{this.props.label}</label>
-      <textarea className='form-text-input' onChange={this.props.onChange} value={this.props.value} />
+      <textarea rows="10" cols="20" wrap="hard" className='form-text-input' onChange={this.props.onChange} value={this.props.value} />
     </div>);
   }
 }
@@ -78,6 +78,8 @@ class EventForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log(this.state);
+
     this.props.action(this.state).then((eventRes) => this.props.history.push(`/events/${eventRes.event.id}`));
 
 

@@ -21,22 +21,25 @@
 #
 
 class Event < ApplicationRecord
-  before_validation :ensure_img_url
   validates :title, presence: true, uniqueness: true
   validates :body, :date, :time_start, :time_end, :address, :city, :state, :host_id, :category_id,
-  :total_tickets, :price, presence: true
+  :total_tickets, :price, :img_url, presence: true
   validate :valid_date
   
+  before_validation :ensure_img_url
 
   def ensure_img_url
-
-     self.img_url ||= "https://images.unsplash.com/photo-1468359601543-843bfaef291a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7988cfd6c74ccf6e16094939d87dc274&auto=format&fit=crop&w=2706&q=80"
+    if self.img_url.empty?
+    self.img_url = "https://images.unsplash.com/photo-1468359601543-843bfaef291a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7988cfd6c74ccf6e16094939d87dc274&auto=format&fit=crop&w=2706&q=80"
+    
+    end
  
     # Photo by Redd Angelo on Unsplash
   end 
 
   # def valid_times
-  #   unless self.time_start > self.time_end
+   
+  #   unless self.time_start < self.time_end
   #     errors[:event] << "ending time must be greater than starting time"
   #   end 
   # end 

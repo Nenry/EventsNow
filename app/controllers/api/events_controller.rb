@@ -17,7 +17,7 @@ class Api::EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.host_id = current_user.id
     @event.time_start = convert_time(@event.time_start)
-    @event.time_end = convert_time(@event.time_start)
+    @event.time_end = convert_time(@event.time_end)
 
 
     if @event.category_id == 0 
