@@ -60,10 +60,18 @@ class EventShow extends React.Component {
     this.setState({ modalIsOpen: false, ticketProcess: "cart" });
   }
 
+  // componentWillReceiveProps(nextProps) {
+  //   if (nextProps.match.params.categoryId !== this.props.match.params.eventId)
+  //     this.props.fetchEvent(nextProps.match.params.eventId);
+  //   if (this.props.currentUser)
+  //     this.props.fetchBookmarks();
+  // }
+
   componentDidMount() {
-    this.props.fetchEvent(this.props.match.params.eventId);
-    this.props.fetchBookmarks();
     window.scrollTo(0, 0);
+    this.props.fetchEvent(this.props.match.params.eventId);
+    if (this.props.currentUser)
+      this.props.fetchBookmarks();
   }
 
   handleDelete(e) {
@@ -71,10 +79,16 @@ class EventShow extends React.Component {
   }
 
   handleCheckout() {
-    if (this.currentUser)
+    if (this.props.currentUser)
       this.props.createTicket({ event_id: this.props.event.id, tickets_count: this.state.ticketCount })
         .then(() => this.setState({ ticketProcess: 'confirm' }));
 
+
+  }
+
+  handleBookmark() {
+    if (this.props.currentUser)
+      this.props.createBookmark({ event_id: this.props.event.id });
   }
 
   update(field) {
@@ -214,7 +228,7 @@ class EventShow extends React.Component {
 
                   <button onClick={() => this.props.deleteBookmark(this.bookmarked())} className="show-bar-button">Unbookmark</button>
                   :
-                  <button onClick={() => this.props.createBookmark({ event_id: this.props.event.id })} className="show-bar-button">Bookmark</button>
+                  <button onClick={() => this.handleBookmark()} className="show-bar-button">Bookmark</button>
                 }
               </div>
               <div className="event-show-main-detail">

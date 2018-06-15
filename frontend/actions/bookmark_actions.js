@@ -45,3 +45,9 @@ export const fetchBookmarks = () => dispatch => (
     dispatch(receiveBookmarks(bookmarksRes))
   ))
 );
+
+export const clearBookmarks = () => dispatch => (
+  BookMarkApiUtil.fetchAllBookmarks().then(bookmarksRes => (
+    dispatch(receiveBookmarks({}))
+  ))
+);
