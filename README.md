@@ -34,7 +34,7 @@ One of my other features that I admire is my Bookmarking feature. It was difficu
 
 
 ```javascript
- {this.bookmarked() ?
+ { this.bookmarked() ?
    <button onClick={() => this.props.deleteBookmark(this.bookmarked())} className="show-bar-button">
    Unbookmark
    </button>
