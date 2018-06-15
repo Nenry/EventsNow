@@ -234,9 +234,10 @@ class EventShow extends React.Component {
                     <div className="sidebar-detail-header">
 
                       Date and Time
-                      <div>
-                        {this.convertDate(this.props.event.date)}
-                      </div>
+
+                    </div>
+                    <div>
+                      {this.convertDate(this.props.event.date)}
                     </div>
                     {this.props.event.time_start}-{this.props.event.time_end}
                   </div>

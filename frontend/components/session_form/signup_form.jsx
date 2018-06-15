@@ -45,7 +45,7 @@ class SignUpForm extends React.Component {
           <section className="logo">E</section>
           <h2 className="sign-title">Welcome</h2>
           <h3 className="signup-message">
-            Create an account.
+            Create an account or {this.props.navLink}
           </h3>
           {/* {this.renderErrors()} */}
 
