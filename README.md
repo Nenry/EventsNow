@@ -35,16 +35,25 @@ One of my other features that I admire is my Bookmarking feature. It was difficu
 
 ```javascript
 <div className='show-bar'>
-               {this.props.session.id === this.props.event.host_id ? <Link to={`/events/${this.props.event.id}/edit`} className="show-bar-button">Edit</Link> : <div></div>}
-               {this.props.session.id === this.props.event.host_id ? <button onClick={(e) => this.handleDelete(e)} className="show-bar-button">Delete</button> : <div></div>}
 
-               {this.bookmarked() ?
+ {this.props.session.id === this.props.event.host_id ?
+   <Link to={`/events/${this.props.event.id}/edit`} className="show-bar-button">Edit</Link>
+   :
+   <div></div>
+ }
 
-                 <button onClick={() => this.props.deleteBookmark(this.bookmarked())} className="show-bar-button">Unbookmark</button>
-                 :
-                 <button onClick={() => this.handleBookmark()} className="show-bar-button">Bookmark</button>
-               }
-             </div>
+ {this.props.session.id === this.props.event.host_id ?
+   <button onClick={(e) => this.handleDelete(e)} className="show-bar-button">Delete</button>
+   :
+   <div></div>
+ }
+
+ {this.bookmarked() ?
+   <button onClick={() => this.props.deleteBookmark(this.bookmarked())} className="show-bar-button">Unbookmark</button>
+   :
+   <button onClick={() => this.handleBookmark()} className="show-bar-button">Bookmark</button>
+ }
+</div>
 ```
 
 # Future implementations
