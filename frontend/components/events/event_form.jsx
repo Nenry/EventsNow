@@ -78,7 +78,6 @@ class EventForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
     console.log(this.state);
     console.log(this.props.session);
     console.log(this.props.currentUser);
