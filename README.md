@@ -4,7 +4,7 @@
 EventsNow is a full stack web application inspired by Eventbrite.com.
 This application will allow users to create events with a ticketing system. The following technologies were used to create this application: `Ruby on Rails`, `PostgreSQL`, `Redux`, `JQuery`, `Javascript` and `React`.
 
-https://eventsnow.herokuapp.com/#/
+[EventsNow Link](https://eventsnow.herokuapp.com/#/)
 
 
 ![Home page view ](https://github.com/Nenry/EventsNow/blob/master/Wireframes/images/eventsnow_homepage.png?raw=true)
