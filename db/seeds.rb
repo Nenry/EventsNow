@@ -607,7 +607,7 @@ Event.create({
   time_start: "8:00 AM",
   time_end: "9:00 PM"
 })
-Event.new({
+Event.create({
   title: "Joey Feelsgood Live Piano Concert",
   body: "Joey Feelsgood is finally coming to the San Francisco Bay Area! Here him on his piano live at the best venue ever for acoustics! 1014 Folsom",
   date: Date.new(2018, 6, 30),
