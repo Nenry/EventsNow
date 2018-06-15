@@ -30,30 +30,19 @@ One of my features that I admire is my category/tags function. It is incorporate
 
 
 ## Bookmarking
-One of my other features that I admire is my Bookmarking feature. It was difficult to get the all the associations to work since it was very user specific to their own bookmark of the event. The biggest obstacle to to make a dynamic button of it being `unbookmarked` or ready to be bookmarked. I resolved this by fetching the current user's bookmarks and identifying if the current event I.D was included on that `bookmark`. Simple yet difficult approach. A code snippet below to render the changing `bookmark` button.
+One of my other features that I admire is my Bookmarking feature. It was difficult to get the all the associations to work since it was very user specific to their own bookmark of the event. The biggest obstacle to to make a dynamic button of it being `unbookmarked` or ready to be bookmarked. I resolved this by fetching the current user's bookmarks and identifying if the current event I.D was included on that `bookmark`. In addition, creating a helper method that implemented that logic. Simple yet difficult approach. A code snippet below to render the changing `bookmark` button.
 
 
 ```javascript
-<div className='show-bar'>
-
- {this.props.session.id === this.props.event.host_id ?
-   <Link to={`/events/${this.props.event.id}/edit`} className="show-bar-button">Edit</Link>
-   :
-   <div></div>
- }
-
- {this.props.session.id === this.props.event.host_id ?
-   <button onClick={(e) => this.handleDelete(e)} className="show-bar-button">Delete</button>
-   :
-   <div></div>
- }
-
  {this.bookmarked() ?
-   <button onClick={() => this.props.deleteBookmark(this.bookmarked())} className="show-bar-button">Unbookmark</button>
+   <button onClick={() => this.props.deleteBookmark(this.bookmarked())} className="show-bar-button">
+   Unbookmark
+   </button>
    :
-   <button onClick={() => this.handleBookmark()} className="show-bar-button">Bookmark</button>
+   <button onClick={() => this.handleBookmark()} className="show-bar-button">
+   Bookmark
+   </button>
  }
-</div>
 ```
 
 # Future implementations
