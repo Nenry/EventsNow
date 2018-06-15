@@ -21,7 +21,7 @@ One of my features that I admire is my category/tags function. It is incorporate
 
 
 
-# Bookmarking
+## Bookmarking
 One of my other features that I admire is my Bookmarking feature. It was difficult to get the all the associations to work since it was very user specific to their own bookmark of the event. The biggest obstacle to to make a dynamic button of it being unbookmarked or ready to be bookmarked. I resolved this by fetching the current user's bookmarks and identifying if the current event I.D was included on that bookmark. Simple yet difficult approach. A code snippet below to render the changing bookmark button.
 
 
@@ -39,7 +39,7 @@ One of my other features that I admire is my Bookmarking feature. It was difficu
              </div>
 ```
 
-## Future implementations
+# Future implementations
 ### Google maps integration
 A current feature on Eventbrite is that you are able to search for events by locations. This is very convenient and feature I will implement next.
 
