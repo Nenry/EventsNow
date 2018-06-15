@@ -12,6 +12,7 @@ class CategoryShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchCategory(this.props.match.params.categoryId);
+    window.scrollTo(0, 0);
   }
 
 

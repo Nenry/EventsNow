@@ -494,6 +494,143 @@ Event.create({
 
 })
 
+Event.create({
+  title: "Natural Photography Class",
+  body: "Do you love nature? Do you love how that particular view looked at the time? Want to make sure you capture the moment exactly as you see it? We will teach you exactly like that",
+  date: Date.new(2018, 6, 30),
+  address: "Natural Bridges State Park",
+  city: "Santa Cruz",
+  state: "CA",
+  host_id: 1,
+  category_id: 4,
+  total_tickets: 256,
+  img_url: "https://c1.staticflickr.com/2/1721/42086554024_c925234d8d_c.jpg",
+  price: 50,
+  time_start: "3:30 PM",
+  time_end: "5:30 PM"
+})
+Event.create({
+  title: "Kids Learn To Be Artists",
+  body: "Is your child passionate about drawing or coloring? We will teach them the basics and advanced techniques to improve their current skills. We are friendly, courteous and patient.",
+  date: Date.new(2018, 6, 30),
+  address: "YAC Community Center",
+  city: "Santa Clara",
+  state: "CA",
+  host_id: 1,
+  category_id: 4,
+  total_tickets: 256,
+  img_url: "https://c1.staticflickr.com/2/1757/27934959207_d79217b816_c.jpg",
+  price: 2,
+  time_start: "1:30 PM",
+  time_end: "4:30 PM"
+})
+Event.create({
+  title: "Cooking Right At Camping",
+  body: "Most of the time I tell people I've had my best food when camping. They call me crazy, but I think it's because they don't know how to use their surroundings. I will teach you how to teach cook like a pro while you're camping.",
+  date: Date.new(2018, 6, 30),
+  address: "Henry Coe Park",
+  city: "Morgan Hill",
+  state: "CA",
+  host_id: 1,
+  category_id: 4,
+  total_tickets: 256,
+  img_url: "https://c1.staticflickr.com/2/1755/28930402228_ab830844c5_c.jpg",
+  price: 35,
+  time_start: "4:30 PM",
+  time_end: "8:30 PM"
+})
+Event.create({
+  title: "Artisan Drinks",
+  body: "Where the greatest bartender makes you the fanciest of drinks. Drinks you have never tried. You will be mind blown at the creations of these drinks",
+  date: Date.new(2018, 6, 30),
+  address: "2730 Manhattan",
+  city: "New York",
+  state: "New York",
+  host_id: 1,
+  category_id: 3,
+  total_tickets: 256,
+  img_url: "https://c1.staticflickr.com/2/1745/28930401828_d84927bda9.jpg",
+  price: 56,
+  time_start: "9:30 PM",
+  time_end: "11:30 PM"
+})
+Event.create({
+  title: "Tasty Water",
+  body: "Are you tired of just regular water? Come try our customized fruity waters that will blow your mind. Even if you love regular water, see what you can do with it!",
+  date: Date.new(2018, 6, 30),
+  address: "Japan Town",
+  city: "San Jose",
+  state: "CA",
+  host_id: 1,
+  category_id: 3,
+  total_tickets: 256,
+  img_url: "https://c1.staticflickr.com/1/900/27934958017_2b9e30b8dc_c.jpg",
+  price: 3,
+  time_start: "8:30 AM",
+  time_end: "4:30 PM"
+})
+Event.create({
+  title: "Potstickers and Dim Sum More!",
+  body: "Are you a fan of potstickers, dumplings, and dim sum? This is the event for you. Chefs flown from Asia just to put on this event. You will learn the techniques and the culture behind these various foods.",
+  date: Date.new(2018, 6, 30),
+  address: "Santa Clara Fairgrounds",
+  city: "Santa Clara",
+  state: "CA",
+  host_id: 1,
+  category_id: 3,
+  total_tickets: 256,
+  img_url: "https://c1.staticflickr.com/2/1726/41903545355_d108edf845_c.jpg",
+  price: 45,
+  time_start: "10:30 AM",
+  time_end: "5:30 PM"
+})
+Event.create({
+  title: "Record Timing for Music!",
+  body: "Come to Tony's Records. There is a huge sale and we have a few surprise celebrities coming. We have all the records. If we don't then we will find it for you!",
+  date: Date.new(2018, 6, 30),
+  address: "483 Franklin St.",
+  city: "Oakland",
+  state: "CA",
+  host_id: 1,
+  category_id: 2,
+  total_tickets: 256,
+  img_url: "https://c1.staticflickr.com/1/879/28930399298_f7149277ca_c.jpg",
+  price: 0,
+  time_start: "8:00 AM",
+  time_end: "9:00 PM"
+})
+Event.create({
+  title: "Joey Feelsgood Live Piano Concert",
+  body: "Joey Feelsgood is finally coming to the San Francisco Bay Area! Here him on his piano live at the best venue ever for acoustics! 1014 Folsom",
+  date: Date.new(2018, 6, 30),
+  address: "1014 Folsom Ave",
+  city: "San Francisco",
+  state: "CA",
+  host_id: 1,
+  category_id: 2,
+  total_tickets: 256,
+  img_url: "https://c1.staticflickr.com/2/1744/41903543125_66881e5899_c.jpg",
+  price: 47,
+  time_start: "9:30 PM",
+  time_end: "11:30 PM"
+})
+Event.create({
+  title: "Famous Local DJs Concert",
+  body: "San Francisco Bay Area's native DJs are playing at this event! They all have been through auditions and we made sure to only provide the best. Plus, there are a few big names that you probably didn't know were natives. Do not miss out!!",
+  date: Date.new(2018, 6, 30),
+  address: "Jill Graham",
+  city: "San Francisco",
+  state: "CA",
+  host_id: 1,
+  category_id: 2,
+  total_tickets: 256,
+  img_url: "https://c1.staticflickr.com/2/1735/28930398308_02de3aba25_c.jpg",
+  price: 62,
+  time_start: "6:30 PM",
+  time_end: "11:30 PM"
+})
+
+
 # Event.create({
 #   title: "",
 #   body: "",
@@ -504,11 +641,11 @@ Event.create({
 #   host_id: 1,
 #   category_id: 5,
 #   total_tickets: 256,
-#   img_url: "https://c1.staticflickr.com/2/1750/28930403158_5a183579fb_c.jpg",
+#   img_url: "",
 #   price: 0,
 #   time_start: "",
 #   time_end: ""
-
+# })
 # })
 # Event.create({
 #   title: "",
