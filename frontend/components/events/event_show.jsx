@@ -71,8 +71,9 @@ class EventShow extends React.Component {
   }
 
   handleCheckout() {
-    this.props.createTicket({ event_id: this.props.event.id, tickets_count: this.state.ticketCount })
-      .then(() => this.setState({ ticketProcess: 'confirm' }));
+    if (this.currentUser)
+      this.props.createTicket({ event_id: this.props.event.id, tickets_count: this.state.ticketCount })
+        .then(() => this.setState({ ticketProcess: 'confirm' }));
 
   }
 
