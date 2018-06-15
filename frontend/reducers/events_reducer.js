@@ -5,6 +5,7 @@ import {RECEIVE_EVENT, RECEIVE_EVENTS, REMOVE_EVENT} from '../actions/event_acti
 
 const eventsReducer = (state = {}, action) => {
   Object.freeze(state);
+
   switch (action.type) {
     case RECEIVE_EVENTS:
       return merge({}, state, action.events);

@@ -81,7 +81,7 @@ class EventForm extends React.Component {
     // console.log(this.state);
     // console.log(this.props.session);
     // console.log(this.props.currentUser);
-    if (this.state.time_start !== "" && this.state.time_end !== "")
+    // if (this.state.time_start !== "" && this.state.time_end !== "")
       this.props.action(this.state).then((eventRes) => this.props.history.push(`/events/${eventRes.event.id}`));
 
 
@@ -121,7 +121,7 @@ class EventForm extends React.Component {
           {/* <TextInput onChange={this.update('category')} value={this.state.category} label="Category" />
           {this.renderErrors("Category")} */}
           <NumberInput onChange={this.update('total_tickets')} value={this.total_tickets} label='Tickets' />
-          {this.renderErrors("Tickets")}
+          {this.renderErrors("Total tickets")}
           <NumberInput onChange={this.update('price')} value={this.state.price} label="Price" />
           {this.renderErrors("Price")}
           <div>
