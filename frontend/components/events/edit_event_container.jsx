@@ -8,7 +8,9 @@ const msp = (state, ownProps) => {
   return ({
     event: state.entities.events[ownProps.match.params.eventId],
     formType: "Update Event",
-    errors: state.errors.events
+    errors: state.errors.events,
+    session: state.session,
+    currentUser: state.entities.users[state.session.id]
   });
 };
 

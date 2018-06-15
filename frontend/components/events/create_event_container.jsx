@@ -11,7 +11,9 @@ const msp = state => {
       time_start: '', time_end: ''
     },
     formType: "Publish Event",
-    errors: state.errors.events
+    errors: state.errors.events,
+    session: state.session,
+    currentUser: state.entities.users[state.session.id]
   });
 };
 

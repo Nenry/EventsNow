@@ -7,8 +7,10 @@ import React from 'react';
 
 const msp = (state) => ({
   errors: state.errors.session,
+  session: state.session,
   formType: 'login',
-  navLink: <Link className='signup-message-prop' to="/signup">sign up here</Link>
+  navLink: <Link className='signup-message-prop' to="/signup">sign up here</Link>,
+  currentUser: state.entities.users[state.session.id],
 });
 
 const mdp = (dispatch, ownProps) => ({
