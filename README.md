@@ -6,7 +6,7 @@ This application will allow users to create events with a ticketing system. The 
 
 [EventsNow Link](https://eventsnow.herokuapp.com/#/)
 
-[Eventbrite](https://www.eventbrite.com/)
+
 
 
 ![Home page view ](https://github.com/Nenry/EventsNow/blob/master/Wireframes/images/eventsnow_homepage.png?raw=true)
