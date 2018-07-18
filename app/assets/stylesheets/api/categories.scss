@@ -18,7 +18,8 @@
 .music {
   background-image: url("https://c1.staticflickr.com/1/883/41883189545_c1a54256b3_b.jpg");
   height: 200px;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   grid-column: 1/3;
   display: flex;
@@ -28,7 +29,7 @@
 
 .food-drinks {
   background-image: url("https://c1.staticflickr.com/1/884/41884976405_9f265b9b17_b.jpg");
-  background-size: 100% 100%;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,7 +37,8 @@
 
 .classes {
   background-image: url("https://c1.staticflickr.com/1/896/40975083690_d5844f1b76_b.jpg");
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,7 +47,8 @@
 .arts {
   background-image: url("https://c1.staticflickr.com/1/899/42736317402_3e9cb3c8c4_h.jpg");
   height: 200px;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,7 +56,8 @@
 
 .parties {
   background-image: url("https://c1.staticflickr.com/1/895/42068803554_fb6707b1d5_b.jpg");
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,7 +65,8 @@
 
 .sport-wellness {
   background-image: url("https://c1.staticflickr.com/1/879/42787295651_91f0565573_b.jpg");
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,7 +75,8 @@
 .networking {
   background-image: url("https://c1.staticflickr.com/2/1733/40976242900_2966931ff9_b.jpg");
   height: 200px;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center center;
   grid-column: 2/4;
   display: flex;
   align-items: center;
