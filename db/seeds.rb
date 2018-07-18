@@ -297,7 +297,7 @@ Event.create({
 Event.create({
   title: "Socialize Under The Night Sky",
   body: "It's summer time! Let's enjoy this nice weather while meeting great people. Drinks and snacks will be provided",
-  date: Date.new(2018, 6, 30),
+  date: Date.new(2018, 9, 30),
   address: "Point Lobos Avenue, Great Highway",
   city: "San Francisco",
   state: "CA",
@@ -387,7 +387,7 @@ Event.create({
 Event.create({
   title: "Muay Thai Convention",
   body: "The greatest muay thai fighters have come straight from Thailand to display muay thai. This convention will explain the sport and true meaning of muay thai in Thailand. There will be many freebies and gear to purchase. Come and don't miss this event!",
-  date: Date.new(2018, 6, 30),
+  date: Date.new(2018, 8, 20),
   address: "Santa Clara Convention Center",
   city: "San Jose",
   state: "CA ",
@@ -419,7 +419,7 @@ Event.create({
 Event.create({
   title: "Disco Party",
   body: "You heard it. It's time to get down and get groovy like the 1970s.",
-  date: Date.new(2018, 6, 30),
+  date: Date.new(2020, 6, 30),
   address: "Huge Warehouse",
   city: "Los Angeles",
   state: "CA",
@@ -451,7 +451,7 @@ Event.create({
 Event.create({
   title: "Art Of Breakdance",
   body: "You've always seen in the streets. How did it get started? Why do people do it? We will explain and teach the underground culture of breakdancing.",
-  date: Date.new(2018, 6, 30),
+  date: Date.new(2019, 6, 30),
   address: "Community Center",
   city: "Palo Alto",
   state: "CA",
@@ -505,7 +505,7 @@ Event.create({
 Event.create({
   title: "Natural Photography Class",
   body: "Do you love nature? Do you love how that particular view looked at the time? Want to make sure you capture the moment exactly as you see it? We will teach you exactly like that",
-  date: Date.new(2018, 6, 30),
+  date: Date.new(2018, 11, 30),
   address: "Natural Bridges State Park",
   city: "Santa Cruz",
   state: "CA",
@@ -520,7 +520,7 @@ Event.create({
 Event.create({
   title: "Kids Learn To Be Artists",
   body: "Is your child passionate about drawing or coloring? We will teach them the basics and advanced techniques to improve their current skills. We are friendly, courteous and patient.",
-  date: Date.new(2018, 6, 30),
+  date: Date.new(2018, 10, 30),
   address: "YAC Community Center",
   city: "Santa Clara",
   state: "CA",
@@ -535,7 +535,7 @@ Event.create({
 Event.create({
   title: "Cooking Right At Camping",
   body: "Most of the time I tell people I've had my best food when camping. They call me crazy, but I think it's because they don't know how to use their surroundings. I will teach you how to teach cook like a pro while you're camping.",
-  date: Date.new(2018, 6, 30),
+  date: Date.new(2018, 8, 30),
   address: "Henry Coe Park",
   city: "Morgan Hill",
   state: "CA",
@@ -550,7 +550,7 @@ Event.create({
 Event.create({
   title: "Artisan Drinks",
   body: "Where the greatest bartender makes you the fanciest of drinks. Drinks you have never tried. You will be mind blown at the creations of these drinks",
-  date: Date.new(2018, 6, 30),
+  date: Date.new(2018, 11, 30),
   address: "2730 Manhattan",
   city: "New York",
   state: "New York",
@@ -565,7 +565,7 @@ Event.create({
 Event.create({
   title: "Tasty Water",
   body: "Are you tired of just regular water? Come try our customized fruity waters that will blow your mind. Even if you love regular water, see what you can do with it!",
-  date: Date.new(2018, 6, 30),
+  date: Date.new(2018, 10, 30),
   address: "Japan Town",
   city: "San Jose",
   state: "CA",
@@ -580,7 +580,7 @@ Event.create({
 Event.create({
   title: "Potstickers and Dim Sum More!",
   body: "Are you a fan of potstickers, dumplings, and dim sum? This is the event for you. Chefs flown from Asia just to put on this event. You will learn the techniques and the culture behind these various foods.",
-  date: Date.new(2018, 6, 30),
+  date: Date.new(2018, 9, 30),
   address: "Santa Clara Fairgrounds",
   city: "Santa Clara",
   state: "CA",
@@ -595,7 +595,7 @@ Event.create({
 Event.create({
   title: "Record Timing for Music!",
   body: "Come to Tony's Records. There is a huge sale and we have a few surprise celebrities coming. We have all the records. If we don't then we will find it for you!",
-  date: Date.new(2018, 6, 30),
+  date: Date.new(2018, 8, 30),
   address: "483 Franklin St.",
   city: "Oakland",
   state: "CA",
@@ -610,7 +610,7 @@ Event.create({
 Event.create({
   title: "Joey Feelsgood Live Piano Concert",
   body: "Joey Feelsgood is finally coming to the San Francisco Bay Area! Here him on his piano live at the best venue ever for acoustics! 1014 Folsom",
-  date: Date.new(2018, 6, 30),
+  date: Date.new(2018, 8, 30),
   address: "1014 Folsom Ave",
   city: "San Francisco",
   state: "CA",
@@ -622,10 +622,10 @@ Event.create({
   time_start: "9:30 PM",
   time_end: "11:30 PM"
 })
-Event.create({
+Event.new({
   title: "Famous Local DJs Concert",
   body: "San Francisco Bay Area's native DJs are playing at this event! They all have been through auditions and we made sure to only provide the best. Plus, there are a few big names that you probably didn't know were natives. Do not miss out!!",
-  date: Date.new(2018, 6, 30),
+  date: Date.new(2018, 8, 30),
   address: "Jill Graham",
   city: "San Francisco",
   state: "CA",
