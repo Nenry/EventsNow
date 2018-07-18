@@ -68,12 +68,14 @@ class Event < ApplicationRecord
   has_many :bookmarks,
   primary_key: :id,
   foreign_key: :event_id,
-  class_name: :Bookmark
+  class_name: :Bookmark,
+  dependent: :destroy
 
   has_many :tickets,
   primary_key: :id,
   foreign_key: :event_id,
-  class_name: :Ticket
+  class_name: :Ticket,
+  dependent: :destroy
 
 
   belongs_to :category,

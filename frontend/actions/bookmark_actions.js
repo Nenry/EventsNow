@@ -4,7 +4,7 @@ export const RECEIVE_BOOKMARKS = 'RECEIVE_BOOKMARKS';
 export const RECEIVE_BOOKMARK = 'RECEIVE_BOOKMARK';
 export const REMOVE_BOOKMARK = 'REMOVE_BOOKMARK';
 export const RECEIVE_BOOKMARK_ERRORS = 'RECEIVE_BOOKMARK_ERRORS';
-
+export const DELETE_CLEAR = 'DELETE_CLEAR';
 
 export const receiveBookmark = (bookmark) => ({
   type: RECEIVE_BOOKMARK,
@@ -24,6 +24,11 @@ export const receiveBookmarks = (bookmarks) => ({
 export const receiveErrors = (errors) => ({
   type: RECEIVE_BOOKMARK_ERRORS,
   errors
+});
+
+export const deleteClear = () => ({
+  type: DELETE_CLEAR
+  
 });
 
 export const createBookmark = (eventId) => dispatch => (

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { updateEvent, deleteEvent, fetchEvent } from '../../actions/event_actions';
 import EventShow from './event_show';
-import { createBookmark, deleteBookmark, fetchBookmarks } from '../../actions/bookmark_actions';
+import { createBookmark, deleteBookmark, fetchBookmarks, deleteClear } from '../../actions/bookmark_actions';
 import { createTicket } from '../../actions/ticket_actions';
 const msp = (state, ownProps) => {
   return ({
@@ -23,7 +23,8 @@ const mdp = dispatch => {
     createBookmark: (eventId) => (dispatch(createBookmark(eventId))),
     deleteBookmark: (id) => (dispatch(deleteBookmark(id))),
     createTicket: (eventId) => (dispatch(createTicket(eventId))),
-    fetchBookmarks: () => (dispatch(fetchBookmarks()))
+    fetchBookmarks: () => (dispatch(fetchBookmarks())),
+    clearEvent: () => (dispatch(deleteClear()))
   });
 };
 

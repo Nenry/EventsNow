@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import UserDash from './user_dash';
-import { deleteBookmark, fetchBookmarks } from '../../actions/bookmark_actions';
+import { deleteBookmark, fetchBookmarks, deleteClear } from '../../actions/bookmark_actions';
 import { fetchAllTickets, deleteTicket } from '../../actions/ticket_actions';
 const msp = state =>
   ({

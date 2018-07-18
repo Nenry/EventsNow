@@ -6,7 +6,7 @@ import {
   REMOVE_TICKET
 } from '../actions/ticket_actions';
 import {
-  RECEIVE_BOOKMARK
+  RECEIVE_BOOKMARK, DELETE_CLEAR
 } from '../actions/bookmark_actions';
 import {
   RECEIVE_CURRENT_USER
@@ -25,6 +25,9 @@ const ticketReducer = (state = {}, action) => {
       let newState = merge({}, state);
       delete newState[action.ticketId];
       return new newState;
+    case DELETE_CLEAR:
+      let clearState = {};
+      return clearState;
     default:
       return state;
   }

@@ -3,7 +3,8 @@ import merge from 'lodash/merge';
 import {
   RECEIVE_BOOKMARK,
   RECEIVE_BOOKMARKS,
-  REMOVE_BOOKMARK
+  REMOVE_BOOKMARK,
+  DELETE_CLEAR
 } from '../actions/bookmark_actions';
 import {
   RECEIVE_CURRENT_USER
@@ -24,6 +25,9 @@ const bookmarkReducer = (state = {}, action) => {
       let newState = merge({}, state);
       delete newState[action.bookmarkId];
       return newState;
+    case DELETE_CLEAR:
+      let clearState = {};
+      return clearState;
     default:
       return state;
   }

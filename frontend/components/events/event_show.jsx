@@ -76,6 +76,7 @@ class EventShow extends React.Component {
 
   handleDelete(e) {
     this.props.deleteEvent(this.props.event.id).then(() => this.props.history.push('/events'));
+    this.props.clearEvent();
   }
 
   handleCheckout() {

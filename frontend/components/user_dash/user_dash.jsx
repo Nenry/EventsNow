@@ -27,6 +27,7 @@ class UserDash extends React.Component {
 
 
   componentDidMount() {
+
     this.props.fetchBookmarks();
     this.props.fetchAllTickets();
   }
