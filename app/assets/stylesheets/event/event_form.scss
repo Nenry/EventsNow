@@ -53,11 +53,20 @@
   flex-direction: column;
 }
 
-.submit-button-container {
+.top-bar {
   background-color: #3D4045;
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  height: 48px;
+}
+
+.submit-button-container {
+  // background-color: #3D4045;
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   height: 48px;
 }
 
@@ -66,7 +75,7 @@
   color: white; // width: 97%;
   display: flex;
   justify-content: center;
-  width: 10%;
+  width: 20%;
   text-align: center;
   padding: 10px;
   border-radius: 40px;

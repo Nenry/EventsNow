@@ -94,8 +94,8 @@ class EventForm extends React.Component {
   render() {
     return (
       <div className="event-container">
-        <div className="submit-button-container">
-          <button className="submit-button" onClick={(e) => this.handleSubmit(e)} >{this.props.formType}</button>
+        <div className="top-bar">
+          {/* <button className="submit-button" onClick={(e) => this.handleSubmit(e)} >{this.props.formType}</button> */}
         </div>
         <div className='event-form-header'>
           <div className='step-one'>1</div>
@@ -194,7 +194,9 @@ class EventForm extends React.Component {
           <input type="text" onChange={this.update('img_url')} value={this.state.img_url} /> */}
 
 
-
+          <div className="submit-button-container">
+            <button className="submit-button" onClick={(e) => this.handleSubmit(e)} >{this.props.formType}</button>
+          </div>
         </form>
 
 
