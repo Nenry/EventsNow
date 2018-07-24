@@ -20,7 +20,7 @@ const EventIndexItem = props => {
 
   return (
     <Link to={`/events/${props.event.id}`}>
-      <div>
+      <div className="event-index-container">
         <img className="event-index-img" src={props.event.img_url} />
         <div className="event-description">
           <div className="date-style">
