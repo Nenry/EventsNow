@@ -187,9 +187,11 @@ class EventShow extends React.Component {
 
     if (this.props.event && this.props.currentBookmarks) {
       return (
-        <div className='event-show'>
-
+        <div className='event-show' >
+        <img className='event-blur-bg-img' src={this.props.event.img_url}/>
+        
           <div className="event-show-wrapper">
+
             <div className="event-show-banner-detail">
               <img className="event-show-banner" src={this.props.event.img_url} alt="" />
 
