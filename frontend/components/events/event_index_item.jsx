@@ -16,13 +16,14 @@ const EventIndexItem = props => {
     
     for (let i = 0; i < bookmarks.length; i++ ) {
       if (bookmarks[i].event_id === props.eventId) {
-        return true;
+        return bookmarks[i].id;
       }
     }
     return false;
   };
 
   return (
+    <div>
     <Link to={`/events/${props.event.id}`}>
       <div className="event-index-container">
         <img className="event-index-img" src={props.event.img_url} />
@@ -46,7 +47,7 @@ const EventIndexItem = props => {
             {props.event.title}
 
 
-        {bookmarked() ? <i className="fas fa-bookmark"></i> : <i className="far fa-bookmark bookmark-color"></i>  }
+    
           </div>
 
         </div>
@@ -55,13 +56,22 @@ const EventIndexItem = props => {
         {/* {bookmarked()} */}
         {/* {if (this.props.currentBookmarks.forEach(bookmark) )}
         <i className="far fa-bookmark bookmark-color"></i>
-        <i className="fas fa-bookmark"></i> */}
+      <i className="fas fa-bookmark"></i> */}
 
 
 
 
       </div>
     </Link>
+
+
+
+      {bookmarked() ? 
+      <i className="fas fa-bookmark" onClick={() => props.deleteBookmark(bookmarked())} ></i> 
+      : 
+      <i className="far fa-bookmark bookmark-color" onClick={() => props.createBookmark({event_id: props.eventId})}></i>  }
+
+    </div>
   );
 };
 

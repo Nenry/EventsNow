@@ -1,6 +1,6 @@
 import EventIndexItem from './event_index_item';
 import { createEvent, updateEvent, deleteEvent, fetchEvents } from '../../actions/event_actions';
-import { deleteBookmark, fetchBookmarks, deleteClear } from '../../actions/bookmark_actions';
+import { deleteBookmark, fetchBookmarks, deleteClear, createBookmark } from '../../actions/bookmark_actions';
 import { connect } from 'react-redux';
 import EventIndex from './event_index';
 
@@ -20,6 +20,7 @@ const mdp = dispatch => {
     fetchEvents: () => dispatch(fetchEvents()),
     deleteBookmark: (id) => dispatch(deleteBookmark(id)),
     fetchBookmarks: () => dispatch(fetchBookmarks()),
+    createBookmark: (eventId) => (dispatch(createBookmark(eventId)))
   });
 };
 
