@@ -8,7 +8,7 @@ const msp = (state) => ({
   errors: state.errors.session,
   session: state.session,
   formType: 'signup',
-  navLink: <Link className='signup-message-prop' to="/signin">login</Link>,
+  navLink: <Link className='signup-message-prop' to="/signin">login here</Link>,
   currentUser: state.entities.users[state.session.id],
 });
 
