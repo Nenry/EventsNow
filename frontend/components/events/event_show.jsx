@@ -210,8 +210,17 @@ class EventShow extends React.Component {
                   Price: {this.props.event.price}$
 
                 </div>
-                <div>
+                <div className='ticket-bookmark'>
                   <button className="show-bar-button-ticket" onClick={this.openModal('selectTickets')}>Tickets</button>
+                  <div className='bookmark-show'>
+                  {this.bookmarked() ?
+                    <i className="fas fa-bookmark bookmark-size" onClick={() => this.props.deleteBookmark(this.bookmarked())} ></i>
+                    :
+                    <i className="far fa-bookmark bookmark-size bookmark-color" onClick={() => this.handleBookmark()}></i>
+                  }
+
+
+                  </div>
                   <Modal
                     isOpen={this.state.modalIsOpen}
 
@@ -233,13 +242,22 @@ class EventShow extends React.Component {
                 {this.props.session.id === this.props.event.host_id ? <Link to={`/events/${this.props.event.id}/edit`} className="show-bar-button">Edit</Link> : <div></div>}
                 {this.props.session.id === this.props.event.host_id ? <button onClick={(e) => this.handleDelete(e)} className="show-bar-button">Delete</button> : <div></div>}
 
-                {this.bookmarked() ?
-
-                  <button onClick={() => this.props.deleteBookmark(this.bookmarked())} className="show-bar-button">Unbookmark</button>
+                {/* {this.bookmarked() ?
+                  <i className="fas fa-bookmark bookmark-size" onClick={() => this.props.deleteBookmark(this.bookmarked())} ></i>
                   :
-                  <button onClick={() => this.handleBookmark()} className="show-bar-button">Bookmark</button>
-                }
+                  <i className="far fa-bookmark bookmark-size bookmark-color" onClick={() => this.handleBookmark()}></i>  
+                } */}
               </div>
+                
+                {/* // <button onClick={() => this.props.deleteBookmark(this.bookmarked())} className="show-bar-button">Unbookmark</button>
+                // :
+                // <button onClick={() => this.handleBookmark()} className="show-bar-button">Bookmark</button> */}
+              {/* (bookmarked() ? */}
+            {/* <i className="fas fa-bookmark bookmark-size" onClick={() => this.props.deleteBookmark(this.bookmarked())} ></i>
+              :
+            <i className="far fa-bookmark bookmark-size bookmark-color" onClick={() => this.handleBookmark()}></i>  ) */}
+        
+        
               <div className="event-show-main-detail">
                 <div className="grid-desc">
                   <div className="show-desc-header">
