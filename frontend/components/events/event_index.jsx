@@ -6,7 +6,19 @@ class EventIndex extends React.Component {
   componentDidMount() {
 
     this.props.fetchEvents();
+    this.props.fetchBookmarks();
     window.scrollTo(0, 0);
+  }
+
+
+  bookmarked () {
+    let bookmark = this.props.currentBookmarks;
+    for (let i = 0; i < bookmark.length; i++) {
+      if (bookmark[i].user_id === this.props.currentUser.id) {
+        return true;
+      }
+    }
+    return false;
   }
 
 
@@ -20,7 +32,7 @@ class EventIndex extends React.Component {
           {this.props.events.map((event) => {
             return (
 
-              <EventIndexItem key={event.id} event={event} />
+              <EventIndexItem key={event.id} event={event} bookmarked={this.bookmarked()}/>
 
             );
           })}

@@ -2,20 +2,24 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const EventIndexItem = props => {
-  // const convertTime = (mt) => {
-  //   let date = new Date('1970-01-01T' + mt);
-  //   date.setSeconds(0, 0);
 
-  //   return (
-  //     date.toLocaleTimeString('en-us')
-  //   );
-  // };
 
   const convertDate = (date) => {
     let newDate = date.split("-");
     newDate.push(newDate.shift());
     newDate = newDate.join("/");
     return newDate;
+  };
+
+  const bookmarked = () => {
+    let bookmark = props.currentBookmarks;
+    console.log(bookmark);
+    for (let i = 0; i < bookmark.length; i++ ) {
+      if (bookmark[i].user_id === props.currentUser.id) {
+        return <i className="fas fa-bookmark"></i>;
+      }
+    }
+    return <i className="far fa-bookmark bookmark-color"></i>;
   };
 
   return (
@@ -45,6 +49,15 @@ const EventIndexItem = props => {
           </div>
 
         </div>
+
+        {props.bookmarked ? <i className="far fa-bookmark bookmark-color"></i> : <i className="fas fa-bookmark"></i> }
+          {/* {console.log(props.bookmarked)} */}
+        {/* {bookmarked()} */}
+        {/* {if (this.props.currentBookmarks.forEach(bookmark) )}
+        <i className="far fa-bookmark bookmark-color"></i>
+        <i className="fas fa-bookmark"></i> */}
+
+
 
 
       </div>

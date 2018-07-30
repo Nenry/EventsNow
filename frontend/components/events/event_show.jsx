@@ -10,7 +10,9 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
+    overlay: { zIndex: 10 }
+    
   }
 };
 
@@ -188,7 +190,11 @@ class EventShow extends React.Component {
     if (this.props.event && this.props.currentBookmarks) {
       return (
         <div className='event-show' >
+        <div className='event-blur-div'>
         <img className='event-blur-bg-img' src={this.props.event.img_url}/>
+        </div>
+
+        
         
           <div className="event-show-wrapper">
 
