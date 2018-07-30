@@ -18,7 +18,7 @@
 .root-div {
   display: flex;
   flex-direction: column; // justify-content: space
-  min-height: 100vh;
+  // min-height: 100vh;
   background-color: #F7F7F9
 }
 
@@ -36,3 +36,28 @@
 // body{
 //   height: 100%;
 // }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  // border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltip-message {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  // padding: 2px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  left: -60px
+}
+
+.tooltip:hover .tooltip-message {
+  visibility: visible;
+}

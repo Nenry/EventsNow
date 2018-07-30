@@ -68,9 +68,22 @@ const EventIndexItem = props => {
     <div className='bookmark-icon'>
     {props.showIt ?
       (bookmarked() ? 
-      <i className="fas fa-bookmark bookmark-size" onClick={() => props.deleteBookmark(bookmarked())} ></i> 
+
+        (<div className='tooltip'>
+          <i className="fas fa-bookmark bookmark-size" onClick={() => props.deleteBookmark(bookmarked())} ></i> 
+          <div className='tooltip-message'>Unsave Event</div>
+          </div>
+          
+        )
       : 
-      <i className="far fa-bookmark bookmark-size bookmark-color" onClick={() => props.createBookmark({event_id: props.eventId})}></i>  )
+        (<div className='tooltip'>
+          <i className="far fa-bookmark bookmark-size bookmark-color" onClick={() => props.createBookmark({event_id: props.eventId})}></i>  
+              <div className='tooltip-message'>Save Event</div>
+        </div>
+        )
+      
+    
+      )
     : <div></div>
     
     }
