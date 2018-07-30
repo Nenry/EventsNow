@@ -48,7 +48,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 1em;
   grid-row-gap: 1em;
-  grid-auto-rows: minmax(100px, auto);
+  grid-auto-rows: minmax(100px, 300px);
   align-items: flex-start;
 }
 

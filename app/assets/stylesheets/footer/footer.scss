@@ -55,7 +55,8 @@
   position: absolute;
   z-index: 1;
   top: 30px;
-  left: -60px
+  left: -60px;
+  font-size: 16px;
 }
 
 .tooltip:hover .tooltip-message {
