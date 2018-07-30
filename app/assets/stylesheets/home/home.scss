@@ -10,14 +10,11 @@
   height: 209px;
   display: flex;
   justify-content: center;
-  align-items: center; // position: relative;
-  // margin-left: 400px;
-  // margin-right: 0;
-  background: white;
+  
+  align-items: center; 
   font-family: Benton Sans, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 60px; // 
-  border: 0.5px solid rgb(191, 191, 194); // margin-bottom: 100px;
-  color: #f6682F;
+  color: rgb(253, 57, 8);
   font-weight: 100px;
   border-radius: 10px;
 }
@@ -25,8 +22,17 @@
 .home-flex {
   display: flex;
   justify-content: center;
-  position: relative;
-  bottom: 100px;
+  position: absolute;
+  align-items: center;
+  // top: -450px;
+  text-align: center;
+  align-content: center;
+  flex-direction: column;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  top: 300px;
 }
 
 .temp-events {
@@ -58,6 +64,9 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  position: relative;
+  top: 50px;
+  // top: -150px;
 }
 
 .date-style {
@@ -102,4 +111,12 @@
   margin: 10px;
   margin-bottom: 40px;
   color: rgb(102, 97, 97);
+}
+
+.arrow-color {
+  display:flex;
+  color: rgb(253, 57, 8);
+  font-size: 70px;
+  position: relative;
+  top: -50px;
 }

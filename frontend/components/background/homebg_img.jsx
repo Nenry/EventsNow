@@ -10,6 +10,9 @@ const homeBgImg = () => (
         Find your next experience
       </div>
 
+      <i class="fas fa-arrow-down arrow-color"></i>
+
+
     </div>
 
     <div className="temp-events">
