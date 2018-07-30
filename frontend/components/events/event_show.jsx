@@ -226,7 +226,7 @@ class EventShow extends React.Component {
                   <div className='bookmark-show'>
                   {this.bookmarked() ?
                     (<div className='tooltip'>
-                      <i className="fas fa-bookmark bookmark-size" onClick={() => this.handleBookmark(0)} ></i>
+                      <i className="fas fa-bookmark bookmark-size bookmark-color1" onClick={() => this.handleBookmark(0)} ></i>
                       <div className='tooltip-message'>Unsave Event</div>
                     </div>)
                     :(
