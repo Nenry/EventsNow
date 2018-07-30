@@ -11,6 +11,7 @@ const NavBar = (props) => {
           <Link className="nav-bar-home" to='/'>EventsNow</Link>
           <section className="nav-bar-right-side">
             <Link className="nav-bar-link" to='/events'>BROWSE EVENTS</Link>
+            <Link className="nav-bar-link1" to='/categories'>BROWSE CATEGORIES</Link>
 
             <div className="user-name">
               <img className="user-avatar" src={props.currentUser.img_url} alt="" />
@@ -19,7 +20,7 @@ const NavBar = (props) => {
                 {props.currentUser.first_name}
               </Link>
             </div>
-            <button className="nav-bar-link" onClick={() => props.logout().then(() => props.clearEvent())}>LOGOUT</button>
+            <button className="nav-bar-link-logout" onClick={() => props.logout().then(() => props.clearEvent())}>LOGOUT</button>
             <Link className="nav-bar-link-create" to='/events/new'>CREATE EVENT</Link>
           </section>
         </div>
@@ -37,7 +38,8 @@ const NavBar = (props) => {
           <Link className="nav-bar-home" to='/'>EventsNow</Link>
           <section className="nav-bar-right-side">
             <Link className="nav-bar-link" to='/events'>BROWSE EVENTS</Link>
-            <Link className="nav-bar-link" to='/signin'>SIGN IN</Link>
+            <Link className="nav-bar-link1" to='/categories'>BROWSE CATEGORIES</Link>
+            <Link className="nav-bar-link-logout" to='/signin'>SIGN IN</Link>
             <Link className="nav-bar-link-create" to='/signin'>CREATE EVENT</Link>
           </section>
         </div>

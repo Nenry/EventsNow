@@ -146,16 +146,17 @@
 
 .signup-message-prop {
   margin-left: 2px; // 
-  border: 1px solid rgb(160, 159, 159);
+  border: 1px solid #FF5900;
   padding-left: 4px;
   padding-right: 4px;
   padding-bottom: 2px;
   position: relative;
+  border-radius: 8px;
   top: -1px;
 }
 
 .signup-message-prop:hover {
-  background-color: #88898a;
+  background-color: #FF5900;
 }
 
 .sign-title-welcome {
