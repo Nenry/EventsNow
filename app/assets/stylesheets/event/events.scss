@@ -351,3 +351,16 @@
 .bookmark-color:hover{
   color: blue;
 }
+
+.bookmark-icon{
+  display: flex;
+
+  position: relative;
+  top: -40px;
+  justify-content: flex-end;
+  right: 10px;
+}
+
+.bookmark-size {
+  font-size: 20px;
+}
