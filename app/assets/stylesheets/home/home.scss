@@ -89,10 +89,11 @@
   margin-right:10px;
   height: 25px;
   overflow: hidden;
-    // text-overflow: ellipsis;
+  // white-space: nowrap;
+  // text-overflow: ellipsis;
+  width: 93%;
     // /* Required for text-overflow to do anything */
 
-    // white-space: nowrap;
 }
 
 .upcoming-header {
