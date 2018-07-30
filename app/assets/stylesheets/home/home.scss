@@ -72,6 +72,7 @@
 
 .event-description {
   display: grid;
+  margin-left: 10px;
 }
 
 .event-time {
@@ -83,6 +84,9 @@
   font-size: 20px;
   font-weight: 400;
   color: rgb(83, 78, 78);
+  display: flex;
+  justify-content: space-between;
+  margin-right:10px;
 }
 
 .upcoming-header {
