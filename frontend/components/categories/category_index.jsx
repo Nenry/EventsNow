@@ -8,6 +8,10 @@ class CategoryIndex extends React.Component {
 
   render() {
     return (
+      <div className='home-categories'>
+        <div className='category-header'>
+          Categories
+      </div>
       <div className="categories-index-wrapper">
         <Link className="music" to='/categories/2'>Music</Link>
         <Link className="food-drinks" to='/categories/3'>Food & Drinks</Link>
@@ -16,6 +20,7 @@ class CategoryIndex extends React.Component {
         <Link className="parties" to='/categories/6'>Parties</Link>
         <Link className="sport-wellness" to='/categories/7'>Sport & Wellness</Link>
         <Link className="networking" to='/categories/8'>Networking</Link>
+      </div>
       </div>
 
     );

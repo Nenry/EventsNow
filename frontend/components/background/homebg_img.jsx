@@ -16,12 +16,9 @@ const homeBgImg = () => (
       <EventIndexContainer />
     </div>
 
-    <div className='home-categories'>
-      <div className='category-header'>
-        Categories
-      </div>
+
       <CategoryIndexContainer />
-    </div>
+   
 
 
 
