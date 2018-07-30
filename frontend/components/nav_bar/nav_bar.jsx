@@ -50,38 +50,5 @@ const NavBar = (props) => {
   return props.currentUser ? logged() : newUser();
 
 };
-// const NavBar = ({ currentUser, logout }) => {
 
-//   const logged = () => {
-//     return (
-//       <button onClick={() => logout()}>Logout</button>
-//     )
-//   }
-
-//   const newUser = () => {
-//     return (
-//       <Link to='Sign Up'>Sign Up</Link>
-//     )
-//   }
-
-//   return (
-//     <div>
-//       <Link to='/'>EventsNow</Link>
-//       <Link to='/events'>Browse Events</Link>
-//       <Link to='/events/new'>Create Event</Link>
-
-//       {currentUser ? logged() :  newUser()}
-
-
-//       <Link to='/signin'></Link>
-
-
-
-//     </div>
-
-
-
-
-//   );
-// };
 export default NavBar;

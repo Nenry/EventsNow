@@ -75,7 +75,7 @@ const EventIndexItem = props => {
       (bookmarked() ? 
 
         (<div className='tooltip'>
-          <i className="fas fa-bookmark bookmark-size" onClick={() => handleBookmark(0)} ></i> 
+          <i className="fas fa-bookmark bookmark-size bookmark-color1" onClick={() => handleBookmark(0)} ></i> 
           {/* <i className="fas fa-bookmark bookmark-size" onClick={() => props.deleteBookmark(bookmarked())} ></i>  */}
           <div className='tooltip-message'>Unsave Event</div>
           </div>

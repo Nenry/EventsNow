@@ -47,6 +47,20 @@ class EventShow extends React.Component {
 
   }
 
+
+ handleBookmark (action) {
+    if (this.props.currentUser) {
+      if (action === 1) {
+        this.props.createBookmark({ event_id: this.props.event.id });
+      } else if (action === 0) {
+        this.props.deleteBookmark(this.bookmarked());
+      }
+    } else {
+      this.props.history.push('/signin');
+    }
+
+  }; 
+
   currentBookmarkId() {
     this.props.currentBookmarks.find((bookmark) => bookmark.event_id === this.props.match.params.eventId);
   }
@@ -89,10 +103,7 @@ class EventShow extends React.Component {
 
   }
 
-  handleBookmark() {
-    if (this.props.currentUser)
-      this.props.createBookmark({ event_id: this.props.event.id });
-  }
+
 
   update(field) {
     return (e) => {
@@ -214,9 +225,17 @@ class EventShow extends React.Component {
                   <button className="show-bar-button-ticket" onClick={this.openModal('selectTickets')}>Tickets</button>
                   <div className='bookmark-show'>
                   {this.bookmarked() ?
-                    <i className="fas fa-bookmark bookmark-size" onClick={() => this.props.deleteBookmark(this.bookmarked())} ></i>
-                    :
-                    <i className="far fa-bookmark bookmark-size bookmark-color" onClick={() => this.handleBookmark()}></i>
+                    (<div className='tooltip'>
+                      <i className="fas fa-bookmark bookmark-size" onClick={() => this.handleBookmark(0)} ></i>
+                      <div className='tooltip-message'>Unsave Event</div>
+                    </div>)
+                    :(
+                      <div className='tooltip'>
+                        <i className="far fa-bookmark bookmark-size bookmark-color" onClick={() => this.handleBookmark(1)}></i>
+                          <div className='tooltip-message'>Save Event</div>
+                      </div>
+
+                    )
                   }
 
 
@@ -242,21 +261,9 @@ class EventShow extends React.Component {
                 {this.props.session.id === this.props.event.host_id ? <Link to={`/events/${this.props.event.id}/edit`} className="show-bar-button">Edit</Link> : <div></div>}
                 {this.props.session.id === this.props.event.host_id ? <button onClick={(e) => this.handleDelete(e)} className="show-bar-button">Delete</button> : <div></div>}
 
-                {/* {this.bookmarked() ?
-                  <i className="fas fa-bookmark bookmark-size" onClick={() => this.props.deleteBookmark(this.bookmarked())} ></i>
-                  :
-                  <i className="far fa-bookmark bookmark-size bookmark-color" onClick={() => this.handleBookmark()}></i>  
-                } */}
+         
               </div>
                 
-                {/* // <button onClick={() => this.props.deleteBookmark(this.bookmarked())} className="show-bar-button">Unbookmark</button>
-                // :
-                // <button onClick={() => this.handleBookmark()} className="show-bar-button">Bookmark</button> */}
-              {/* (bookmarked() ? */}
-            {/* <i className="fas fa-bookmark bookmark-size" onClick={() => this.props.deleteBookmark(this.bookmarked())} ></i>
-              :
-            <i className="far fa-bookmark bookmark-size bookmark-color" onClick={() => this.handleBookmark()}></i>  ) */}
-        
         
               <div className="event-show-main-detail">
                 <div className="grid-desc">
@@ -299,7 +306,7 @@ class EventShow extends React.Component {
                   </div>
                 </div>
               </div>
-              {/* <div className="tag-header">TAGS</div> */}
+
               <div className="category">
                 {this.props.event.category.id === 1 ?
                   <div></div> :
