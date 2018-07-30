@@ -6,7 +6,9 @@ class EventIndex extends React.Component {
   componentDidMount() {
 
     this.props.fetchEvents();
-    this.props.fetchBookmarks();
+    if (this.props.currentUser) {
+      this.props.fetchBookmarks();
+    }
     window.scrollTo(0, 0);
   }
 
