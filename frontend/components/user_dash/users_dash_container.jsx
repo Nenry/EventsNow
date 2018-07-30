@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import UserDash from './user_dash';
-import { deleteBookmark, fetchBookmarks, deleteClear } from '../../actions/bookmark_actions';
+import { deleteBookmark, fetchBookmarks, deleteClear, createBookmark } from '../../actions/bookmark_actions';
 import { fetchAllTickets, deleteTicket } from '../../actions/ticket_actions';
 const msp = state =>
   ({
@@ -29,7 +29,8 @@ const mdp = dispatch => ({
   deleteBookmark: (id) => dispatch(deleteBookmark(id)),
   fetchBookmarks: () => dispatch(fetchBookmarks()),
   fetchAllTickets: () => dispatch(fetchAllTickets()),
-  deleteTicket: (ticketId) => dispatch(deleteTicket(ticketId))
+  deleteTicket: (ticketId) => dispatch(deleteTicket(ticketId)),
+  createBookmark: (eventId) => (dispatch(createBookmark(eventId)))
 });
 
 

@@ -47,7 +47,10 @@ class UserDash extends React.Component {
 
           {this.props.currentBookmarks.map((bookmark) => (
             <div key={bookmark.id}>
-              <EventIndexItem key={bookmark.event.id} event={bookmark.event} className="bookmarks" eventId={bookmark.event.id} currentBookmarks={this.props.currentBookmarks} />
+              <EventIndexItem key={bookmark.event.id} event={bookmark.event} className="bookmarks" eventId={bookmark.event.id} 
+              currentBookmarks={this.props.currentBookmarks} createBookmark={this.props.createBookmark} deleteBookmark={this.props.deleteBookmark}
+                showIt={true}
+              />
 
             </div>
 
@@ -66,7 +69,8 @@ class UserDash extends React.Component {
         {this.props.currentTickets.map((ticket) => (
           <div key={ticket.id}>
             <EventIndexItem key={ticket.event.id} event={ticket.event} className="bookmarks" 
-            ticketCount={ticket.tickets_count} eventId={ticket.event_id} currentBookmarks={this.props.currentBookmarks}/>
+            ticketCount={ticket.tickets_count} eventId={ticket.event_id} currentBookmarks={this.props.currentBookmarks}
+              createBookmark={this.props.createBookmark} deleteBookmark={this.props.deleteBookmark}  />
 
           </div>
 
