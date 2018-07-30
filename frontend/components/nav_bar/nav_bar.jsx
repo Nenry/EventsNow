@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NavBar = (props) => {
 
+
   const logged = () => {
     return (
       <div>
@@ -18,7 +19,7 @@ const NavBar = (props) => {
                 {props.currentUser.first_name}
               </Link>
             </div>
-            <button className="nav-bar-link" onClick={() => props.logout()}>LOGOUT</button>
+            <button className="nav-bar-link" onClick={() => props.logout().then(() => props.clearEvent())}>LOGOUT</button>
             <Link className="nav-bar-link-create" to='/events/new'>CREATE EVENT</Link>
           </section>
         </div>

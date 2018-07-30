@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { withRouter } from 'react-router-dom';
 const EventIndexItem = props => {
 
 
@@ -21,6 +21,19 @@ const EventIndexItem = props => {
     }
     return false;
   };
+
+  const handleBookmark = (action) => {
+    if (props.currentUser) {
+      if (action === 1) {
+        props.createBookmark({ event_id: props.eventId });
+      } else if (action === 0) {
+        props.deleteBookmark(bookmarked());
+      }
+    }else {
+      props.history.push('/signin');
+    }
+
+  }; 
 
   return (
     <div>
@@ -52,14 +65,6 @@ const EventIndexItem = props => {
 
         </div>
 
-          {/* {console.log(props.bookmarked)} */}
-        {/* {bookmarked()} */}
-        {/* {if (this.props.currentBookmarks.forEach(bookmark) )}
-        <i className="far fa-bookmark bookmark-color"></i>
-      <i className="fas fa-bookmark"></i> */}
-
-
-
 
       </div>
     </Link>
@@ -70,14 +75,16 @@ const EventIndexItem = props => {
       (bookmarked() ? 
 
         (<div className='tooltip'>
-          <i className="fas fa-bookmark bookmark-size" onClick={() => props.deleteBookmark(bookmarked())} ></i> 
+          <i className="fas fa-bookmark bookmark-size" onClick={() => handleBookmark(0)} ></i> 
+          {/* <i className="fas fa-bookmark bookmark-size" onClick={() => props.deleteBookmark(bookmarked())} ></i>  */}
           <div className='tooltip-message'>Unsave Event</div>
           </div>
           
         )
       : 
         (<div className='tooltip'>
-          <i className="far fa-bookmark bookmark-size bookmark-color" onClick={() => props.createBookmark({event_id: props.eventId})}></i>  
+          <i className="far fa-bookmark bookmark-size bookmark-color" onClick={() => handleBookmark(1)}></i>  
+          {/* <i className="far fa-bookmark bookmark-size bookmark-color" onClick={() => props.createBookmark({event_id: props.eventId})}></i>   */}
               <div className='tooltip-message'>Save Event</div>
         </div>
         )
@@ -95,4 +102,4 @@ const EventIndexItem = props => {
   );
 };
 
-export default EventIndexItem;
+export default withRouter(EventIndexItem);
