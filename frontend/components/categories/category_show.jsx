@@ -22,7 +22,7 @@ class CategoryShow extends React.Component {
       return (
         <div className="categories-show-container">
           <div className="categories-show-header">
-            {this.props.category.title}&nbsp;Category
+            {this.props.category.title}
           </div>
           <div className="bookmarks">
             {this.props.category.events.map((event) => (
