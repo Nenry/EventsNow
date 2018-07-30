@@ -12,14 +12,14 @@ const EventIndexItem = props => {
   };
 
   const bookmarked = () => {
-    let bookmark = props.currentBookmarks;
-    console.log(bookmark);
-    for (let i = 0; i < bookmark.length; i++ ) {
-      if (bookmark[i].user_id === props.currentUser.id) {
-        return <i className="fas fa-bookmark"></i>;
+    let bookmarks = props.currentBookmarks;
+    console.log(props.eventId);
+    for (let i = 0; i < bookmarks.length; i++ ) {
+      if (bookmarks[i].event_id === props.eventId) {
+        return true;
       }
     }
-    return <i className="far fa-bookmark bookmark-color"></i>;
+    return false;
   };
 
   return (
@@ -49,8 +49,8 @@ const EventIndexItem = props => {
           </div>
 
         </div>
+        {bookmarked() ? <i className="fas fa-bookmark"></i> : <i className="far fa-bookmark bookmark-color"></i>  }
 
-        {props.bookmarked ? <i className="far fa-bookmark bookmark-color"></i> : <i className="fas fa-bookmark"></i> }
           {/* {console.log(props.bookmarked)} */}
         {/* {bookmarked()} */}
         {/* {if (this.props.currentBookmarks.forEach(bookmark) )}

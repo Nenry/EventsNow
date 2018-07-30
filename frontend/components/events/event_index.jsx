@@ -32,7 +32,7 @@ class EventIndex extends React.Component {
           {this.props.events.map((event) => {
             return (
 
-              <EventIndexItem key={event.id} event={event} bookmarked={this.bookmarked()}/>
+              <EventIndexItem key={event.id} event={event} eventId={event.id} currentBookmarks={this.props.currentBookmarks}/>
 
             );
           })}

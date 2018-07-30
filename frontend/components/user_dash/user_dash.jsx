@@ -1,5 +1,6 @@
 import React from 'react';
 import EventIndexItem from '../events/event_index_item';
+import EventIndex from '../events/event_index';
 import Modal from 'react-modal';
 const customStyles = {
   content: {
@@ -46,7 +47,7 @@ class UserDash extends React.Component {
 
           {this.props.currentBookmarks.map((bookmark) => (
             <div key={bookmark.id}>
-              <EventIndexItem key={bookmark.event.id} event={bookmark.event} className="bookmarks" />
+              <EventIndexItem key={bookmark.event.id} event={bookmark.event} className="bookmarks" eventId={bookmark.event.id} currentBookmarks={this.props.currentBookmarks} />
 
             </div>
 
@@ -64,7 +65,8 @@ class UserDash extends React.Component {
 
         {this.props.currentTickets.map((ticket) => (
           <div key={ticket.id}>
-            <EventIndexItem key={ticket.event.id} event={ticket.event} className="bookmarks" ticketCount={ticket.tickets_count} />
+            <EventIndexItem key={ticket.event.id} event={ticket.event} className="bookmarks" 
+            ticketCount={ticket.tickets_count} eventId={ticket.event_id} currentBookmarks={this.props.currentBookmarks}/>
 
           </div>
 
