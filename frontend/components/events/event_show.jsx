@@ -301,7 +301,7 @@ class EventShow extends React.Component {
                     <div>
                       {this.props.event.address}
                     </div>
-                    {this.props.event.city},
+                    {this.props.event.city},&nbsp;
                     {this.props.event.state}
                   </div>
                 </div>
