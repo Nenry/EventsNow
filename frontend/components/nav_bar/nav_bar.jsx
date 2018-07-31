@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 const NavBar = (props) => {
 
@@ -20,7 +20,7 @@ const NavBar = (props) => {
                 {props.currentUser.first_name}
               </Link>
             </div>
-            <button className="nav-bar-link-logout" onClick={() => props.logout().then(() => props.clearEvent())}>LOGOUT</button>
+            <button className="nav-bar-link-logout" onClick={() => props.logout().then(() => props.clearEvent()).then(() => props.history.push(`/`))}>LOGOUT</button>
             <Link className="nav-bar-link-create" to='/events/new'>CREATE EVENT</Link>
           </section>
         </div>
@@ -53,4 +53,4 @@ const NavBar = (props) => {
 
 };
 
-export default NavBar;
+export default withRouter(NavBar);

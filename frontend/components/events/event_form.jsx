@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, Redirect } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 class TextInput extends React.Component {
   constructor(props) {
     super(props);
