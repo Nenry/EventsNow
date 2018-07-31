@@ -49,7 +49,7 @@ class UserDash extends React.Component {
             <div key={bookmark.id}>
               <EventIndexItem key={bookmark.event.id} event={bookmark.event} className="bookmarks" eventId={bookmark.event.id} 
               currentBookmarks={this.props.currentBookmarks} createBookmark={this.props.createBookmark} deleteBookmark={this.props.deleteBookmark}
-                showIt={true}
+                showIt={true} currentUser={this.props.currentUser}
               />
 
             </div>
