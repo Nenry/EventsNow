@@ -23,12 +23,12 @@ const EventIndexItem = props => {
   };
 
   const handleBookmark = (action) => {
-    console.log(action);
+    // console.log(action);
     if (props.currentUser) {
       if (action === 1) {
         props.createBookmark({ event_id: props.eventId });
       } else if (action === 0) {
-        console.log('HEREEEE!');
+        // console.log('HEREEEE!');
         props.deleteBookmark(bookmarked());
       }
     }else {
